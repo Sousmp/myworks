@@ -98,8 +98,8 @@ let pageSlider = new Swiper('.page', {
 
    on: {
       init: function () {
-         setScrollType();
          menuSlider();
+         setScrollType();
       },
 
       slideChange: function () {
