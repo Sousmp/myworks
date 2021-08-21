@@ -1,153 +1,424 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>vivat</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>VIVAT</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/style.min.css">
+	<style>
+		body {
+			width: 100% !important;
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+			margin: 0;
+			padding: 0;
+			line-height: 100%;
+			font-family: "Arail", sans-serif;
+		}
+
+		[style*="Open Sans"] {
+			font-family: 'Open Sans', arial, sans-serif !important;
+		}
+
+		img {
+			outline: none;
+			text-decoration: none;
+			border: none;
+			-ms-interpolation-mode: bicubic;
+			max-width: 100% !important;
+			margin: 0;
+			padding: 0;
+			display: block;
+		}
+
+		table td {
+			border-collapse: collapse;
+		}
+
+		table {
+			border-collapse: collapse;
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+		}
+	</style>
 </head>
 
-<body>
-	<header class="header">
-		<div class="header__body">
-			<a href="#" class="header__logo"><img src="img/header/logo.svg" alt="LOGO"></a>
-			<a href="#" class="header__sign"><img src="img/header/person.svg" alt="sign"> Кабинет Клиента</a>
-		</div>
-	</header>
-	<div class="_container">
-		<section class="brands">
-			<div class="brands__body">
-				<div class="brands__item">
-					<img src="img/brands/brunnen.jpg" alt="">
-					<div class="brands__links">
-						<a href="#" class="brands__link">ПРО БРЕНД</a>
-						<a href="#" class="brands__link">КАТАЛОГ</a>
-					</div>
-				</div>
-				<div class="brands__item">
-					<img src="img/brands/kite.jpg" alt="">
-					<div class="brands__links">
-						<a href="#" class="brands__link">ПРО БРЕНД</a>
-						<a href="#" class="brands__link">КАТАЛОГ</a>
-					</div>
-				</div>
-				<div class="brands__item">
-					<img src="img/brands/axent.jpg" alt="">
-					<div class="brands__links">
-						<a href="#" class="brands__link">ПРО БРЕНД</a>
-						<a href="#" class="brands__link">КАТАЛОГ</a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="prices">
-			<div class="prices__container">
-				<h2 class="prices__title">изменение цен на товары:</h2>
-				<div class="prices__body">
-					<div class="prices__item">
-						<div class="prices__img"><img src="img/prices/backpack1.jpg" alt=""></div>
-						<div class="prices__name">Рюкзак <br> GoPack городской</div>
-						<div class="prices__prices">
-							<div class="prices__old-price">730 грн</div>
-							<div class="prices__new-price">659 грн</div>
-						</div>
-						<div class="prices__info">Код: 309440 <br> Артикул: LP21-600M</div>
-						<div class="prices__link">
-							<a href="#">Смотреть</a>
-						</div>
-					</div>
-					<div class="prices__item">
-						<div class="prices__img"><img src="img/prices/backpack2.jpg" alt=""></div>
-						<div class="prices__name">Рюкзак <br> GoPack городской</div>
-						<div class="prices__prices">
-							<div class="prices__old-price">730 грн</div>
-							<div class="prices__new-price">659 грн</div>
-						</div>
-						<div class="prices__info">Код: 309440 <br> Артикул: LP21-600M</div>
-						<div class="prices__link">
-							<a href="#">Смотреть</a>
-						</div>
-					</div>
-					<div class="prices__item">
-						<div class="prices__img"><img src="img/prices/backpack3.jpg" alt=""></div>
-						<div class="prices__name">Рюкзак <br> GoPack городской</div>
-						<div class="prices__prices">
-							<div class="prices__old-price">730 грн</div>
-							<div class="prices__new-price">659 грн</div>
-						</div>
-						<div class="prices__info">Код: 309440 <br> Артикул: LP21-600M</div>
-						<div class="prices__link">
-							<a href="#">Смотреть</a>
-						</div>
-					</div>
-					<div class="prices__item">
-						<div class="prices__img"><img src="img/prices/backpack4.jpg" alt=""></div>
-						<div class="prices__name">Рюкзак <br> GoPack городской</div>
-						<div class="prices__prices">
-							<div class="prices__old-price">730 грн</div>
-							<div class="prices__new-price">659 грн</div>
-						</div>
-						<div class="prices__info">Код: 309440 <br> Артикул: LP21-600M</div>
-						<div class="prices__link">
-							<a href="#">Смотреть</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="products">
-			<div class="products__body">
-				<img class="products__img" src="img/bg1.jpg" alt="">
-				<h2 class="products__title">канцелярские <br> товары и рюкзаки</h2>
-			</div>
-		</section>
-		<section class="fair">
-			<div class="fair__container">
-				<div class="fair__body">
-					<h2 class="fair__title">Компания приняла участие в выставке Istanbul Stationery & Office Fair 2020</h2>
-					<div class="fair__images">
-						<div class="fair__img">
-							<img src="img/fair/img1.jpg" alt="">
-						</div>
-						<div class="fair__img">
-							<img src="img/fair/img2.jpg" alt="">
-						</div>
-						<div class="fair__img">
-							<img src="img/fair/img3.jpg" alt="">
-						</div>
-					</div>
-					<p class="fair__text">Этот год только начался, но уже богат событиями. В этот раз мы отправились покорять
-						Турцию. Компания приняла участие в международной выставке Istanbul Stationery & Office Fair 2020,
-						которая
-						прошла с 19 по 23 февраля 2020 года в Выставочном Конгресс-центре Tüyap Fair в Стамбуле.
-					</p>
-					<p class="fair__text">Мы здесь впервые, но смогли достойно представить свою продукцию. Посетители стенда
-						имели возможность ознакомиться с образцами товаров для школы и офиса.
-					</p>
-				</div>
-			</div>
-		</section>
-		<footer class="footer">
-			<div class="footer__content">
-				<h2 class="footer__title">Еще больше новостей, уникальных предложений <br> и полезной информации:</h2>
-				<div class="footer__networks">
-					<a href="#" class="footer__link"><img src="img/footer/youtube.png" alt=""></a>
-					<a href="#" class="footer__link"><img src="img/footer/facebook.png" alt=""></a>
-					<a href="#" class="footer__link"><img src="img/footer/vk.png" alt=""></a>
-					<a href="#" class="footer__link"><img src="img/footer/instagram.png" alt=""></a>
-				</div>
-				<div class="footer__subtitle">Вы выразили согласие получать рассылку от ООО «Виват Трейдинг». Вы можете
-					управлять рассылками <a href="#" class="footer__subtitle-a">здесь</a>. Если вы больше не хотите получать
-					от нас писем,
-					кликните по ссылке.</div>
-			</div>
-			<div class="footer__subfooter">
-				<p>Вы получили это письмо, потому что Вы есть партнером ООО «Виват Трейдинг». <br> Вы всегда можете
-					отписаться от
-					нашей рассылки в один клик.</p>
-			</div>
-		</footer>
-	</div>
+<body class="body" style="margin: 0; padding: 0;">
+	<table cellpadding="0" cellspacing="0" width="100%" align="center">
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff" align="center">
+					<tr class="esd-structure">
+						<td>
+							<table class=" table-600" cellpadding="0" cellspacing="0" width="600" align="center">
+								<tr class="green__strip">
+									<td bgcolor="#ffffff" class="header-td">
+										<table class="table-540 header" cellpadding="0" cellspacing="0" width="540"
+											align="center">
+											<tr>
+												<td align="left" class="logo">
+													<img width="100px"
+														src="https://pics.esputnik.com/repository/home/83040/images/msg/2664620/1628268662929.png"
+														alt="logo" />
+												</td>
+												<td align="right">
+													<a href="#" class="sign">
+														<img
+															src="https://pics.esputnik.com/repository/home/83040/images/msg/2664620/1628268780384.png"
+															alt="Person" />
+														Кабинет клиента
+													</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+					</tr>
+					<tr class="">
+						<td class="brends-td" bgcolor="#ffffff">
+							<table class="main table-600" cellpadding="0" cellspacing="0" width="600" align="center">
+								<tr>
+									<td class="space-5"><img
+											src="https://pics.esputnik.com/repository/home/27957/images/msg/2664631/1628270112011.jpg"
+											alt="Brend" />
+									</td>
+									<td class="space-5"><img
+											src="https://pics.esputnik.com/repository/home/27957/images/msg/2664631/1628270120173.jpg"
+											alt="Brend" />
+									</td>
+									<td><img
+											src="https://pics.esputnik.com/repository/home/27957/images/msg/2664631/1628270125817.jpg"
+											alt="Brend" />
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr class="">
+						<td bgcolor="#ffffff" height="30" width="600" align="center">
+							<h2 class="title esd-text">изменение цен на товары:</h2>
+						</td>
+					</tr>
+					<tr class="">
+						<td bgcolor="#ffffff">
+							<table class="cards table-540" cellpadding="0" cellspacing="0" width="600" align="center">
+								<tr>
+									<td class="brends-td" bgcolor="#ffffff">
+										<table class="card table-120" cellpadding="0" cellspacing="0" width="120" align="center">
+											<tr>
+												<td>
+													<img
+														src="https://pics.esputnik.com/repository/home/27957/images/msg/2664631/1628270151109.jpg"
+														alt="Product">
+												</td>
+											</tr>
+											<tr>
+												<td height="48" width="120">
+													<h3 class="mini-title esd-text">Рюкзак GoPack <br /> городской</h3>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<table class="prices" cellpadding="0" cellspacing="0" width="120">
+														<tr>
+															<td>
+																<p class="old-price esd-text">730грн</p>
+															</td>
+															<td>
+																<p class="new-price esd-text">659грн</p>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<p class="info esd-text">
+														Код: 309440 <br />
+														Артикул: LP21-600M
+													</p>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<a href="#" class="product__link esd-text">Смотреть</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td class="brends-td" bgcolor="#ffffff">
+										<table class="card table-120" cellpadding="0" cellspacing="0" width="120" align="center">
+											<tr>
+												<td>
+													<img
+														src="https://pics.esputnik.com/repository/home/27957/images/msg/2664631/1628270157890.jpg"
+														alt="Product">
+												</td>
+											</tr>
+											<tr>
+												<td height="48" width="120">
+													<h3 class="mini-title esd-text">Рюкзак GoPack <br /> городской</h3>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<table class="prices" cellpadding="0" cellspacing="0" width="120">
+														<tr>
+															<td>
+																<p class="old-price esd-text">730грн</p>
+															</td>
+															<td>
+																<p class="new-price esd-text">659грн</p>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<p class="info esd-text">
+														Код: 309440 <br />
+														Артикул: LP21-600M
+													</p>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<a href="#" class="product__link esd-text">Смотреть</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td class="brends-td" bgcolor="#ffffff">
+										<table class="card table-120" cellpadding="0" cellspacing="0" width="120" align="center">
+											<tr>
+												<td>
+													<img
+														src="https://pics.esputnik.com/repository/home/27957/images/msg/2664631/1628270163158.jpg"
+														alt="Product">
+												</td>
+											</tr>
+											<tr>
+												<td height="48" width="120">
+													<h3 class="mini-title esd-text">Рюкзак GoPack <br /> городской</h3>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<table class="prices" cellpadding="0" cellspacing="0" width="120">
+														<tr>
+															<td>
+																<p class="old-price esd-text">730грн</p>
+															</td>
+															<td>
+																<p class="new-price esd-text">659грн</p>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<p class="info esd-text">
+														Код: 309440 <br />
+														Артикул: LP21-600M
+													</p>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<a href="#" class="product__link esd-text">Смотреть</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td class="brends-td" bgcolor="#ffffff">
+										<table class="card table-120" cellpadding="0" cellspacing="0" width="120" align="center">
+											<tr>
+												<td>
+													<img
+														src="https://pics.esputnik.com/repository/home/27957/images/msg/2664631/1628270171407.jpg"
+														alt="Product" />
+												</td>
+											</tr>
+											<tr>
+												<td height="48" width="120">
+													<h3 class="mini-title esd-text">Рюкзак GoPack <br /> городской</h3>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<table class="prices" cellpadding="0" cellspacing="0" width="120">
+														<tr>
+															<td>
+																<p class="old-price esd-text">730грн</p>
+															</td>
+															<td>
+																<p class="new-price esd-text">659грн</p>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<p class="info esd-text">
+														Код: 309440 <br />
+														Артикул: LP21-600M
+													</p>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<a href="#" class="product__link esd-text">Смотреть</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr class="">
+						<td height="160" width="600" bgcolor="#ffffff">
+							<div class="bg1">
+								<h3 class="white__title esd-text">канцелярские <br /> товары и рюкзаки</h3>
+							</div>
+						</td>
+					</tr>
+					<tr class="">
+						<td bgcolor="#ffffff" height="30" width="600" align="center">
+							<h2 class="title esd-text">Компания приняла участие в выставке <br /> Istanbul Stationery & Office
+								Fair 2020
+							</h2>
+						</td>
+					</tr>
+					<tr class="">
+						<td bgcolor="#ffffff">
+							<table class="space-bottom-20 table-540" cellpadding="0" cellspacing="0" width="540"
+								align="center">
+								<tr>
+									<td class="space-15">
+										<img
+											src="https://pics.esputnik.com/repository/home/27957/images/msg/2664631/1628270217073.jpg"
+											alt="Istanbul">
+									</td>
+									<td class="space-15">
+										<img
+											src="https://pics.esputnik.com/repository/home/27957/images/msg/2664631/1628270221982.jpg"
+											alt="Istanbul">
+									</td>
+									<td>
+										<img
+											src="https://pics.esputnik.com/repository/home/27957/images/msg/2664631/1628270227087.jpg"
+											alt="Istanbul">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr class="">
+						<td bgcolor="#ffffff">
+							<table class="space-bottom-20 table-540" cellpadding="0" cellspacing="0" width="540"
+								align="center">
+								<tr>
+									<td>
+										<p class="text esd-text">Этот год только начался, но уже богат событиями. В этот раз мы
+											отправились
+											покорять
+											Турцию.
+											Компания
+											приняла участие в международной выставке Istanbul Stationery & Office Fair 2020,
+											которая прошла
+											с 19 по
+											23 февраля 2020 года в Выставочном Конгресс-центре Tüyap Fair в Стамбуле.
+										<p class="text esd-text"> Мы здесь впервые, но смогли достойно представить свою продукцию.
+											Посетители стенда
+											имели
+											возможность
+											ознакомиться с образцами товаров для школы и офиса.</p>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr class="">
+						<td>
+							<table class="footer table-600" cellpadding="0" cellspacing="0" width="600" align="center">
+								<tr>
+									<td>
+										<h2 class="white__title-2 esd-text">Еще больше новостей, уникальных предложений <br />
+											и полезной информации:</h2>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<table class="networks table-220" cellpadding="0" cellspacing="0" width="220"
+											align="center">
+											<tr>
+												<td><a href="#"><img
+															src="https://pics.esputnik.com/repository/home/27957/images/msg/2664631/1628273422865.png"
+															alt="YouTube">
+													</a>
+												</td>
+
+												<td>
+													<a href="#">
+														<img
+															src="https://pics.esputnik.com/repository/home/27957/images/msg/2664631/1628273438894.png"
+															alt="Facebook">
+													</a>
+												</td>
+												<td>
+													<a href="#">
+														<img
+															src="https://pics.esputnik.com/repository/home/27957/images/msg/2664631/1628273443511.png"
+															alt="VK">
+													</a>
+												</td>
+												<td>
+													<a href="#">
+														<img
+															src="https://pics.esputnik.com/repository/home/27957/images/msg/2664631/1628273448946.png"
+															alt="Instargam">
+													</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<p class="white__text esd-text">Вы выразили согласие получать рассылку от ООО «Виват
+											Трейдинг».
+											<br /> Вы
+											можете
+											управлять рассылками здесь. <br /> Если вы больше не хотите получать от нас писем,
+											кликните по
+											ссылке.
+										</p>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr class="">
+						<td bgcolor="#ffffff" align="center">
+							<p class="last-text esd-text">Вы получили это письмо, потому что Вы есть партнером ООО «Виват
+								Трейдинг».
+								<br /> Вы
+								всегда
+								можете отписаться от
+								нашей рассылки в один клик.
+							</p>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
 
 </html>
