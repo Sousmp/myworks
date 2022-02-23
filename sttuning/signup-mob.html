@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.min.css?_v=20220222174850">
+   <title>Главная</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header>
+         <div class="header__menu menu">
+            <button class="menu__icon">
+               <span></span>
+            </button>
+            <nav class="menu__body">
+               <div class="menu__decor">
+                  <picture><source srcset="img/decor1.webp" type="image/webp"><img src="img/decor1.png" alt="Image"></picture>
+               </div>
+               <ul class="menu__list">
+                  <li class="menu__item"><a href="index.html" class="menu__link @@index">главная</a></li>
+                  <li class="menu__item"><a href="services.html" class="menu__link @@services">детейлинг</a></li>
+                  <li class="menu__item"><a href="tirecatalog.html" class="menu__link @@tires">шины</a></li>
+                  <li class="menu__item"><a href="wheelscatalog.html" class="menu__link @@wheels">диски</a></li>
+                  <li class="menu__item"><a href="aboutus.html" class="menu__link @@aboutus">о нас</a></li>
+                  <li class="menu__item"><a href="contacts.html" class="menu__link @@contacts">Контакты</a></li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+      <main class="main">
+         <div class="cart__decor2">
+            <picture><source srcset="img/decor1.webp" type="image/webp"><img src="img/decor1.png" alt="Image"></picture>
+         </div>
+         <a href="index.html" class="close"></a>
+         <section class="signup-mob">
+            <div class="signup-mob__container">
+               <h3 class="signup-mob__title">запись <br> online</h3>
+               <div class="signup-mob__inputs">
+                  <div class="signup-mob__input">
+                     <input type="text" placeholder="ФИО">
+                  </div>
+                  <div class="signup-mob__input">
+                     <input onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="text" placeholder="телефон">
+                  </div>
+                  <div class="signup-mob__input">
+                     <input type="text" placeholder="email">
+                  </div>
+                  <div class="signup-mob__input">
+                     <input type="text" placeholder="дата">
+                  </div>
+               </div>
+               <div class="signup-mob__services">
+                  <div class="signup-mob__listname">
+                     <p>Выберите услугу</p>
+                  </div>
+                  <div class="signup-mob__checkbox">
+                     <label class="signup-mob__checkbox-box">
+                        шиномонтаж на месте
+                        <input type="checkbox">
+                        <span class="signup-mob__checkmark"></span>
+                     </label>
+                  </div>
+                  <div class="signup-mob__checkbox">
+                     <label class="signup-mob__checkbox-box">
+                        чернение резины
+                        <input type="checkbox">
+                        <span class="signup-mob__checkmark"></span>
+                     </label>
+                  </div>
+                  <div class="signup-mob__checkbox">
+                     <label class="signup-mob__checkbox-box">
+                        мойка кузова
+                        <input type="checkbox">
+                        <span class="signup-mob__checkmark"></span>
+                     </label>
+                  </div>
+                  <div class="signup-mob__checkbox">
+                     <label class="signup-mob__checkbox-box">
+                        оклейка кузова
+                        <input type="checkbox">
+                        <span class="signup-mob__checkmark"></span>
+                     </label>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer class="signup-mob__footer">
+         <div class="signup-mob__text">После оформления записи
+            наш менеджер свяжется с вами для уточнения деталей.</div>
+         <button class="signup-mob__button">Записаться</button>
+      </footer>
+      <script src="js/app.min.js?_v=20220222174850"></script>
+   </div>
+</body>
+
+</html>

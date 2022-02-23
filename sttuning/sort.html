@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220222174850" />
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.min.css?_v=20220222174850">
+   <title>Главная</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header>
+         <div class="header__menu menu">
+            <button class="menu__icon">
+               <span></span>
+            </button>
+            <nav class="menu__body">
+               <div class="menu__decor">
+                  <picture><source srcset="img/decor1.webp" type="image/webp"><img src="img/decor1.png" alt="Image"></picture>
+               </div>
+               <ul class="menu__list">
+                  <li class="menu__item"><a href="index.html" class="menu__link @@index">главная</a></li>
+                  <li class="menu__item"><a href="services.html" class="menu__link @@services">детейлинг</a></li>
+                  <li class="menu__item"><a href="tirecatalog.html" class="menu__link @@tires">шины</a></li>
+                  <li class="menu__item"><a href="wheelscatalog.html" class="menu__link @@wheels">диски</a></li>
+                  <li class="menu__item"><a href="aboutus.html" class="menu__link @@aboutus">о нас</a></li>
+                  <li class="menu__item"><a href="contacts.html" class="menu__link @@contacts">Контакты</a></li>
+               </ul>
+            </nav>
+         </div>
+         <a href="index.html" class="close"></a>
+      </header>
+      <main class="main">
+         <div class="cart__decor2">
+            <picture><source srcset="img/decor1.webp" type="image/webp"><img src="img/decor1.png" alt="Image"></picture>
+         </div>
+         <a href="tirecatalog.html" class="close"></a>
+         <section class="filters sort">
+            <div class="sort__container">
+               <div class="filters__block">
+                  <div class="sort__swiper filters-swiper swiper sort__swiper">
+                     <div class="filters-swiper__wrapper swiper-wrapper">
+                        <div class="sort-swiper__slide swiper-slide">по убыванию цены</div>
+                        <div class="sort-swiper__slide swiper-slide">по возрастанию цены</div>
+                        <div class="sort-swiper__slide swiper-slide">по поулярности</div>
+                        <div class="sort-swiper__slide swiper-slide">по алфавиту А-Я</div>
+                        <div class="sort-swiper__slide swiper-slide">По алфавиту Я-А</div>
+                     </div>
+                  </div>
+               </div>
+         </section>
+      </main>
+      <footer class="filters__footer">
+         <button class="filters__submit">применить</button>
+      </footer>
+      <script src="js/app.min.js?_v=20220222174850"></script>
+   </div>
+</body>
+
+</html>
