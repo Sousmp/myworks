@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>WDI</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230926203139">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@300;400;500;600;700&display=swap&_v=20230926203139" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20230926203139" />
+</head>
+
+<body>
+	<div class="wrapper" style="position: relative;">
+		<header class="header">
+			<div class="header__container">
+				<a href="index.html" class="header__logo">
+					<img class="img-svg" src="img/header/logo.svg" alt="Image">
+				</a>
+				<ul data-da=".menu__body,768,first" class="header__list">
+					<li class="header__item"><a href="excavators.html" class="header__link">Excavators</a></li>
+					<li class="header__item"><a href="buildings.html" class="header__link">buildings</a></li>
+					<li class="header__item"><a href="services.html" class="header__link">services</a></li>
+					<li class="header__item"><a href="rent.html" class="header__link">Rent</a></li>
+				</ul>
+				<div data-da=".menu__body,768,1" class="header__buttons">
+					<a href="tel:+1230032332" class="header__tel">+123 003 23 32</a>
+					<button data-popup="#popup" class="header__button">Request a call <img class="img-svg header__arrow" src="img/arrow.svg" alt="Image"></button>
+				</div>
+
+				<div class="header__menu menu">
+					<button type="button" aria-label="Menu" class="menu__button icon-menu"><span></span></button>
+					<div class="menu__body" data-fullscreen>
+						<span class="menu__strip"></span>
+						<ul class="menu__contacts">
+							<li class="menu__item">Donatas: <span><a href="tel:+1230032332">+123 003 23 32</a></span></li>
+							<li class="menu__item">Vaidas: <span><a href="tel:+1230032332">+123 003 23 32</a></span></li>
+							<li class="menu__item">Email:<span><a href="mailto:wdiconstructionltd@gmail.com"> wdiconstructionltd@gmail.com</a></span></li>
+						</ul>
+						<p class="menu__footer">
+							© WDI Construction & Plant Ltd
+						</p>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="sub-front buildings-main">
+				<div class="sub-front__container">
+					<h1 class="sub-front__title">Shaping a New Architecture</h1>
+				</div>
+			</section>
+			<section class="buldings">
+				<div class="buldings__container">
+					<div class="buldings__content">
+						<div class="buldings__item">
+							<div class="buldings__img">
+								<picture><source srcset="img/buildings/item1.webp" type="image/webp"><img src="img/buildings/item1.jpg" alt="Image"></picture>
+							</div>
+							<h3 class="buldings__title">Prefabricated Modular Houses</h3>
+							<div class="buldings__subtitle">
+								<ul>
+									<li>Wood Homes</li>
+									<li>Steel Frame Homes</li>
+									<li>SIP Panel Homes</li>
+									<li>Personalised Solutions</li>
+									<li>Storage Space</li>
+								</ul>
+							</div>
+						</div>
+						<div class="buldings__item">
+							<div class="buldings__img">
+								<picture><source srcset="img/buildings/item2.webp" type="image/webp"><img src="img/buildings/item2.jpg" alt="Image"></picture>
+							</div>
+							<h3 class="buldings__title">Container Builds</h3>
+							<div class="buldings__subtitle">
+								<ul>
+									<li>Offices</li>
+									<li>Retail Space</li>
+									<li>Living Space</li>
+									<li>Temporary Usage Spaces</li>
+									<li>Custom Solutions</li>
+								</ul>
+							</div>
+						</div>
+						<div class="buldings__item">
+							<div class="buldings__img">
+								<picture><source srcset="img/buildings/item3.webp" type="image/webp"><img src="img/buildings/item3.jpg" alt="Image"></picture>
+							</div>
+							<h3 class="buldings__title">Prefabricated accessories</h3>
+							<div class="buldings__subtitle">
+								<ul>
+									<li>Sauna</li>
+									<li>Garage</li>
+									<li>Storage</li>
+									<li>Personalised Solutions</li>
+									<li>Custom Requests</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="form">
+				<div class="form__container">
+					<div class="form__content">
+						<h3 class="form__title">contact us</h3>
+						<p class="form__subtitle">Enter your details and we will contact you as soon as possible</p>
+					</div>
+					<form class="form__form">
+						<input class="form__input form__input-name" type="text" placeholder="Name" name="name">
+						<input class="form__input form__input-email" type="text" placeholder="E-mail" name="email">
+						<button type="submit" class="button-orange form__button">Send<img class="img-svg form__arrow" src="img/arrow.svg" alt="Image"></button>
+					</form>
+				</div>
+			</section>
+			<section class="gallery">
+				<div class="gallery__swiper swiper">
+					<div class="slider__head">
+						<h2 class="slider__title section-title">our gallery</h2>
+						<div class="slider__navigations">
+							<button aria-label="Gallery Scrollbar" data-da=".gallery__swiper,768,last" class="slider__scrollbar gallery__scrollbar "></button>
+							<button aria-label="Gallery Prev Slide" class="slider__button-nav slider__button-prev gallery__button-prev"><img class="img-svg" src="img/arrow.svg" alt="Image"></button>
+							<button aria-label="Gallery Next Slide" class="slider__button-nav slider__button-next gallery__button-next"><img class="img-svg" src="img/arrow.svg" alt="Image"></button>
+						</div>
+					</div>
+					<div class="gallery__wrapper swiper-wrapper">
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<picture><source srcset="img/buildings/1.webp" type="image/webp"><img src="img/buildings/1.jpg" alt="Image"></picture>
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<picture><source srcset="img/buildings/2.webp" type="image/webp"><img src="img/buildings/2.jpg" alt="Image"></picture>
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<picture><source srcset="img/buildings/3.webp" type="image/webp"><img src="img/buildings/3.jpg" alt="Image"></picture>
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<picture><source srcset="img/buildings/4.webp" type="image/webp"><img src="img/buildings/4.jpg" alt="Image"></picture>
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<picture><source srcset="img/buildings/1.webp" type="image/webp"><img src="img/buildings/1.jpg" alt="Image"></picture>
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<picture><source srcset="img/buildings/2.webp" type="image/webp"><img src="img/buildings/2.jpg" alt="Image"></picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__nav">
+					<a href="index.html" class="footer__logo">
+						<img src="img/header/logo.svg" alt="Image">
+					</a>
+					<ul class="footer__list">
+						<li class="footer__item"><a href="excavators.html" class="footer__link">Excavators</a></li>
+						<li class="footer__item"><a href="buildings.html" class="footer__link">buildings</a></li>
+						<li class="footer__item"><a href="services.html" class="footer__link">services</a></li>
+						<li class="footer__item"><a href="#" class="footer__link">contacts</a></li>
+					</ul>
+				</div>
+				<div class="footer__info">
+					<div class="footer__buttons">
+						<a href="tel:+1230032332" class="footer__tel">+123 003 23 32</a>
+						<button data-popup="#popup" class="footer__button button-orange">Request a call<img class="img-svg form__arrow" src="img/arrow.svg" alt="Image"></button>
+					</div>
+					<ul class="footer__contacts">
+						<li class="footer__contact">Donatas: <span><a href="tel:+1230032332">+123 003 23 32</a></span></li>
+						<li class="footer__contact">Vaidas: <span><a href="tel:+1230032332">+123 003 23 32</a></span></li>
+						<li class="footer__contact">Email:<span><a href="mailto:wdiconstructionltd@gmail.com"> wdiconstructionltd@gmail.com</a></span></li>
+					</ul>
+					<p data-da="footer,480,last" class="footer__footer">© WDI Construction & Plant Ltd </p>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__texts">
+					<button data-close type="button" class="popup__close"></button>
+					<h4 class="popup__title">Request a call</h4>
+					<p class="popup__text">Enter your details and we will contact you as soon as possible</p>
+					<form class="popup__form">
+						<input class="popup__input popup__input-name" type="text" placeholder="Name" name="name">
+						<input class="popup__input popup__input-email" type="text" placeholder="E-mail" name="email">
+						<button type="submit" class="button-orange popup__button">Send<img class="img-svg popup__arrow" src="img/arrow.svg" alt="Image"></button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20230926203139"></script>
+</body>
+
+</html>
