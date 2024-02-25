@@ -526,6 +526,7 @@
             this.openPopupsCount--;
             if (this.openPopupsCount === 0 && !document.documentElement.classList.contains("menu-open")) this.bodyLock = false;
             this.popupLogging(`Закрыл попап`);
+            history.replaceState(null, null, window.location.href.split("#")[0]);
         }
         _getHash() {
             if (this.options.hashSettings.location) this.hash = this.targetOpen.selector.includes("#") ? this.targetOpen.selector : this.targetOpen.selector.replace(".", "#");

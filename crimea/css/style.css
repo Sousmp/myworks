@@ -2217,11 +2217,6 @@ html.pc .footer__policy:hover {
     }
 }
 
-  .service .cards__item:nth-child(5),
-  .service .cards__item:nth-child(4) {
-    display: none;
-  }
-
   .error__title {
     max-width: 320px;
   }
@@ -2381,10 +2376,6 @@ html.pc .footer__policy:hover {
 
   .service__reviews {
     padding: 8px;
-  }
-
-  .service__container {
-    padding: 0 20px !important;
   }
 
   .footer {
