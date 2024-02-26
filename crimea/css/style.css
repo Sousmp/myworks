@@ -597,8 +597,15 @@ html.pc ._phone a:hover {
   max-width: 113.75rem;
 }
 
+.header__request {
+  gap: 0 !important;
+}
+
 .header__request span {
-  display: none;
+  -webkit-transition: 0.3s ease 0s;
+  transition: 0.3s ease 0s;
+  opacity: 0;
+  font-size: 0;
 }
 
 .header__content {
@@ -2255,8 +2262,8 @@ html.pc .footer__policy:hover {
   .anim {
     position: sticky;
     top: 0;
-    -webkit-transition: 0.3s ease 0s;
-    transition: 0.3s ease 0s;
+    -webkit-transition: 0.4s ease 0s;
+    transition: 0.4s ease 0s;
   }
 
   .anim__body {
@@ -2271,23 +2278,18 @@ html.pc .footer__policy:hover {
   }
 
   .anim__container {
-    -webkit-transition: 0.3s ease 0s;
-    transition: 0.3s ease 0s;
+    -webkit-transition: 0.4s ease 0s;
+    transition: 0.4s ease 0s;
   }
 
   html._anim .header__request p {
-    -webkit-transition: 0.3s ease 0s;
-    transition: 0.3s ease 0s;
+    -webkit-transition: 0.4s ease 0s;
+    transition: 0.4s ease 0s;
   }
 
   html._anim .header__content {
     position: relative !important;
     z-index: 4 !important;
-  }
-
-  html._anim .header__logo {
-    -webkit-transition: 0.3s ease 0s;
-    transition: 0.3s ease 0s;
   }
 
   html._anim .cards__items {
@@ -2314,14 +2316,14 @@ html.pc .footer__policy:hover {
   }
 
   html._anim .cards__title img {
-    -webkit-transition: 0.3s ease 0s;
-    transition: 0.3s ease 0s;
+    -webkit-transition: 0.4s ease 0s;
+    transition: 0.4s ease 0s;
     width: 40px;
   }
 
   html._anim .cards__title span {
-    -webkit-transition: 0.3s ease 0s;
-    transition: 0.3s ease 0s;
+    -webkit-transition: 0.4s ease 0s;
+    transition: 0.4s ease 0s;
     letter-spacing: -0.5px;
     margin-top: 5px;
     line-height: 100%;
@@ -2334,7 +2336,8 @@ html.pc .footer__policy:hover {
   }
 
   html._scroll .header__request span {
-    display: block;
+    opacity: 1;
+    font-size: 16px;
   }
 
   html._scroll .header__request p {

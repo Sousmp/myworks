@@ -4016,9 +4016,13 @@
     da.init();
     document.addEventListener("DOMContentLoaded", (function() {
         if (document.documentElement.classList.contains("_anim")) window.addEventListener("scroll", (function() {
-            const header = document.querySelector(".header");
             const scrollPosition = window.scrollY;
-            if (scrollPosition > header.offsetHeight) document.documentElement.classList.add("_scroll"); else document.documentElement.classList.remove("_scroll");
+            const logo = document.querySelector(".header__logo");
+            if (window.innerWidth < 651) {
+                let scrollPosition = window.scrollY;
+                if (scrollPosition > 0 && window.scrollY < 85) logo.style.transform = `translateY(-${window.scrollY}px)`; else if (window.scrollY > 84) logo.style.transform = `translateY(-85px)`; else logo.style.transform = `translateY(0px)`;
+            }
+            if (scrollPosition > 20) document.documentElement.classList.add("_scroll"); else document.documentElement.classList.remove("_scroll");
         }));
     }));
     document.addEventListener("DOMContentLoaded", (function() {
