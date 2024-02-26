@@ -882,14 +882,14 @@ html._scroll .cards__title {
 }
 
 html._scroll .cards__title img {
-  width: 60px;
+  width: 54px;
   -webkit-transition: 0.3s ease 0s;
   transition: 0.3s ease 0s;
 }
 
 html._scroll .cards__title span {
   margin-top: 7px;
-  font-size: 3.75rem;
+  font-size: 3.375rem;
   padding-left: 0.9375rem;
   -webkit-transition: 0.3s ease 0s;
   transition: 0.3s ease 0s;
@@ -2157,17 +2157,9 @@ html.pc .footer__policy:hover {
     padding-right: 1.875rem;
   }
 
-  ._transparent-btn span {
-    font-size: 1rem;
-  }
-
   ._gold-btn {
     padding-left: 1.875rem;
     padding-right: 1.875rem;
-  }
-
-  ._gold-btn span {
-    font-size: 1rem;
   }
 }
 
