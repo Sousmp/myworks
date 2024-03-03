@@ -426,7 +426,7 @@ body::after {
 
 ._title {
   font-family: "Muller";
-  font-size: 5rem;
+  font-size: 4.375rem;
   font-weight: 500;
   line-height: 90%;
   letter-spacing: -0.04em;
@@ -1042,7 +1042,7 @@ html._scroll .service__title._line-break span {
 }
 
 .cards__title {
-  font-size: 5rem;
+  font-size: 4.375rem;
   padding-top: 1.25rem;
 }
 
@@ -1268,15 +1268,15 @@ html.pc .cards__hover:hover .cards__plate {
   position: relative;
 }
 
-@supports (font-size: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem )) {
+@supports (font-size: clamp( 2.5rem , 1.8684210526rem  +  3.1578947368vw , 4.375rem )) {
   .withus__title {
-    font-size: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem );
+    font-size: clamp( 2.5rem , 1.8684210526rem  +  3.1578947368vw , 4.375rem );
   }
 }
 
-@supports not (font-size: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem )) {
+@supports not (font-size: clamp( 2.5rem , 1.8684210526rem  +  3.1578947368vw , 4.375rem )) {
   .withus__title {
-    font-size: calc(2.5rem + 2.5 * (100vw - 20rem) / 59.375);
+    font-size: calc(2.5rem + 1.875 * (100vw - 20rem) / 59.375);
   }
 }
 
@@ -1391,15 +1391,15 @@ html.pc .cards__hover:hover .cards__plate {
   padding-right: 5rem;
 }
 
-@supports (font-size: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem )) {
+@supports (font-size: clamp( 2.5rem , 1.8684210526rem  +  3.1578947368vw , 4.375rem )) {
   .form__title {
-    font-size: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem );
+    font-size: clamp( 2.5rem , 1.8684210526rem  +  3.1578947368vw , 4.375rem );
   }
 }
 
-@supports not (font-size: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem )) {
+@supports not (font-size: clamp( 2.5rem , 1.8684210526rem  +  3.1578947368vw , 4.375rem )) {
   .form__title {
-    font-size: calc(2.5rem + 2.5 * (100vw - 20rem) / 59.375);
+    font-size: calc(2.5rem + 1.875 * (100vw - 20rem) / 59.375);
   }
 }
 
@@ -1572,15 +1572,15 @@ html.pc .form__policy a:hover {
   max-width: 18.75rem;
 }
 
-@supports (font-size: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem )) {
+@supports (font-size: clamp( 2.5rem , 1.8684210526rem  +  3.1578947368vw , 4.375rem )) {
   .reviews__title {
-    font-size: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem );
+    font-size: clamp( 2.5rem , 1.8684210526rem  +  3.1578947368vw , 4.375rem );
   }
 }
 
-@supports not (font-size: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem )) {
+@supports not (font-size: clamp( 2.5rem , 1.8684210526rem  +  3.1578947368vw , 4.375rem )) {
   .reviews__title {
-    font-size: calc(2.5rem + 2.5 * (100vw - 20rem) / 59.375);
+    font-size: calc(2.5rem + 1.875 * (100vw - 20rem) / 59.375);
   }
 }
 
@@ -2170,15 +2170,15 @@ html.pc .photos__arrow:hover {
   }
 }
 
-@supports (font-size: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem )) {
+@supports (font-size: clamp( 2.5rem , 1.8684210526rem  +  3.1578947368vw , 4.375rem )) {
   .error__title {
-    font-size: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem );
+    font-size: clamp( 2.5rem , 1.8684210526rem  +  3.1578947368vw , 4.375rem );
   }
 }
 
-@supports not (font-size: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem )) {
+@supports not (font-size: clamp( 2.5rem , 1.8684210526rem  +  3.1578947368vw , 4.375rem )) {
   .error__title {
-    font-size: calc(2.5rem + 2.5 * (100vw - 20rem) / 59.375);
+    font-size: calc(2.5rem + 1.875 * (100vw - 20rem) / 59.375);
   }
 }
 
@@ -3187,15 +3187,15 @@ html.pc .form-review__submit._active:hover {
     padding: 1.25rem 0;
   }
 
-@supports (font-size: clamp( 1.25rem , -2.3531626506rem  +  18.0722891566vw , 5rem )) {
+@supports (font-size: clamp( 1.25rem , -1.7526355422rem  +  15.0602409639vw , 4.375rem )) {
     .propose__title {
-      font-size: clamp( 1.25rem , -2.3531626506rem  +  18.0722891566vw , 5rem );
+      font-size: clamp( 1.25rem , -1.7526355422rem  +  15.0602409639vw , 4.375rem );
     }
 }
 
-@supports not (font-size: clamp( 1.25rem , -2.3531626506rem  +  18.0722891566vw , 5rem )) {
+@supports not (font-size: clamp( 1.25rem , -1.7526355422rem  +  15.0602409639vw , 4.375rem )) {
     .propose__title {
-      font-size: calc(1.25rem + 3.75 * (100vw - 19.9375rem) / 20.75);
+      font-size: calc(1.25rem + 3.125 * (100vw - 19.9375rem) / 20.75);
     }
 }
 
@@ -3227,15 +3227,15 @@ html.pc .form-review__submit._active:hover {
     max-width: 12.5rem;
   }
 
-@supports (font-size: clamp( 2.5rem , -0.5927835052rem  +  13.7457044674vw , 5rem )) {
+@supports (font-size: clamp( 2.5rem , 0.1804123711rem  +  10.3092783505vw , 4.375rem )) {
     .form-review__title {
-      font-size: clamp( 2.5rem , -0.5927835052rem  +  13.7457044674vw , 5rem );
+      font-size: clamp( 2.5rem , 0.1804123711rem  +  10.3092783505vw , 4.375rem );
     }
 }
 
-@supports not (font-size: clamp( 2.5rem , -0.5927835052rem  +  13.7457044674vw , 5rem )) {
+@supports not (font-size: clamp( 2.5rem , 0.1804123711rem  +  10.3092783505vw , 4.375rem )) {
     .form-review__title {
-      font-size: calc(2.5rem + 2.5 * (100vw - 22.5rem) / 18.1875);
+      font-size: calc(2.5rem + 1.875 * (100vw - 22.5rem) / 18.1875);
     }
 }
 
@@ -3355,15 +3355,15 @@ html.pc .form-review__submit._active:hover {
 }
 
 @media (max-width: 78.75rem) {
-@supports (font-size: clamp( 3.375rem , 0.8468559838rem  +  5.2738336714vw , 5rem )) {
+@supports (font-size: clamp( 3.375rem , 1.8192190669rem  +  3.2454361055vw , 4.375rem )) {
     .cards__title {
-      font-size: clamp( 3.375rem , 0.8468559838rem  +  5.2738336714vw , 5rem );
+      font-size: clamp( 3.375rem , 1.8192190669rem  +  3.2454361055vw , 4.375rem );
     }
 }
 
-@supports not (font-size: clamp( 3.375rem , 0.8468559838rem  +  5.2738336714vw , 5rem )) {
+@supports not (font-size: clamp( 3.375rem , 1.8192190669rem  +  3.2454361055vw , 4.375rem )) {
     .cards__title {
-      font-size: calc(3.375rem + 1.625 * (100vw - 47.9375rem) / 30.8125);
+      font-size: calc(3.375rem + 1 * (100vw - 47.9375rem) / 30.8125);
     }
 }
 
@@ -3623,15 +3623,15 @@ html.pc .form-review__submit._active:hover {
     padding: 0 0 2.5rem 0;
   }
 
-@supports (font-size: clamp( 2.5rem , 0.7182628062rem  +  8.9086859688vw , 5rem )) {
+@supports (font-size: clamp( 2.5rem , 1.1636971047rem  +  6.6815144766vw , 4.375rem )) {
     .cards__title {
-      font-size: clamp( 2.5rem , 0.7182628062rem  +  8.9086859688vw , 5rem );
+      font-size: clamp( 2.5rem , 1.1636971047rem  +  6.6815144766vw , 4.375rem );
     }
 }
 
-@supports not (font-size: clamp( 2.5rem , 0.7182628062rem  +  8.9086859688vw , 5rem )) {
+@supports not (font-size: clamp( 2.5rem , 1.1636971047rem  +  6.6815144766vw , 4.375rem )) {
     .cards__title {
-      font-size: calc(2.5rem + 2.5 * (100vw - 20rem) / 28.0625);
+      font-size: calc(2.5rem + 1.875 * (100vw - 20rem) / 28.0625);
     }
 }
 
