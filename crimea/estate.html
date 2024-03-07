@@ -15,7 +15,7 @@
 	<meta name="msapplication-config" content="https://sousmp.github.io/myworks/crimea/browserconfig.xml">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240305195800">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240307151433">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -88,9 +88,9 @@
 									<div class="filter__currency-box">
 										<div class="filter__currency-select">
 											<select data-vertical name="" id="" class="filter__currency">
-												<option value="eur">₽</option>
+												<option value="rub">₽</option>
 												<option value="usd">$</option>
-												<option value="euro">€</option>
+												<option value="eur">€</option>
 											</select>
 										</div>
 										<p class="filter__currency-name">Валюта</p>
@@ -121,6 +121,7 @@
 									<div class="filter__item">
 										<div class="filter__range">
 											<p><span class="filter__value filter__area-value"></span> м<sup>2</sup></p>
+											<!-- Вся логика инпутов с ползунком осуществляется в файле files/forms/range.js -->
 											<div class="filter__area"></div>
 										</div>
 										<p class="filter__name">Метраж</p>
@@ -148,35 +149,205 @@
 									</div>
 									<div class="filter__item">
 										<div class="filter__range">
-											<p><span class="filter__value filter__price-value"></span> ₽</p>
+											<!-- Смена валюты осуществляется в файле libs/select.js на 460 строке примерно -->
+											<p><span class="filter__value filter__price-value"></span><span id="currency-show">₽</span></p>
 											<div class="filter__price"></div>
 										</div>
 										<p class="filter__name">Стоимость до</p>
 									</div>
 								</div>
 							</form>
+							<p class="filter__text">Найдено подходящих вариантов: <span id="filter__result">12</span></p>
+							<button data-popup="#popup" class="estate__request _gold-btn">Получить консультацию</button>
 						</div>
 						<a href="#" class="estate__item estate__hover">
-							<picture><source srcset="img/estate/1.webp" type="image/webp"><img class="estate__img" src="img/estate/1.jpg" alt="Image"></picture>
-							<div class="estate__plate"></div>
+							<div class="estate__img">
+								<picture><source srcset="img/estate/1.webp" type="image/webp"><img class="estate__img" src="img/estate/1.jpg" alt="Image"></picture>
+								<p class="estate__update">Обновлено: 29.01.2024</p>
+								<p class="estate__views">89 просмотров</p>
+							</div>
+							<div class="estate__estate-info estate-info">
+								<h6 class="estate-info__title">Четырёхкомнатная квартира
+									в Ялте, Приморский парк</h6>
+								<div class="estate-info__items">
+									<div class="estate-info__row">
+										<div class="estate-info__item">
+											<div class="estate-info__img">
+												<img src="img/estate/info/1.svg " alt="Image">
+											</div>
+											<div class="estate-info__texts">
+												<p class="estate-info__type">Недвижимость:</p>
+												<p class="estate-info__value">Квартира</p>
+											</div>
+										</div>
+										<div class="estate-info__item">
+											<div class="estate-info__img">
+												<img src="img/estate/info/2.svg " alt="Image">
+											</div>
+											<div class="estate-info__texts">
+												<p class="estate-info__type">Стоимость:</p>
+												<p class="estate-info__value">154 442 230 руб.</p>
+											</div>
+										</div>
+									</div>
+									<div class="estate-info__row">
+										<div class="estate-info__item">
+											<div class="estate-info__img">
+												<img src="img/estate/info/3.svg " alt="Image">
+											</div>
+											<div class="estate-info__texts">
+												<p class="estate-info__type">Спален:</p>
+												<p class="estate-info__value">4</p>
+											</div>
+										</div>
+										<div class="estate-info__item">
+											<div class="estate-info__img">
+												<img src="img/estate/info/4.svg " alt="Image">
+											</div>
+											<div class="estate-info__texts">
+												<p class="estate-info__type">Площадь:</p>
+												<p class="estate-info__value">237.70 м <sup>2</sup></p>
+											</div>
+										</div>
+										<div class="estate-info__item">
+											<div class="estate-info__img">
+												<img src="img/estate/info/5.svg " alt="Image">
+											</div>
+											<div class="estate-info__texts">
+												<p class="estate-info__type">Этаж:</p>
+												<p class="estate-info__value">12/16</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</a>
 						<a href="#" class="estate__item estate__hover">
-							<picture><source srcset="img/estate/1.webp" type="image/webp"><img class="estate__img" src="img/estate/1.jpg" alt="Image"></picture>
-							<div class="estate__plate"></div>
-						</a> <a href="#" class="estate__item estate__hover">
-							<picture><source srcset="img/estate/1.webp" type="image/webp"><img class="estate__img" src="img/estate/1.jpg" alt="Image"></picture>
-							<div class="estate__plate"></div>
+							<div class="estate__img">
+								<picture><source srcset="img/estate/2.webp" type="image/webp"><img class="estate__img" src="img/estate/2.jpg" alt="Image"></picture>
+								<p class="estate__update">Обновлено: 29.01.2024</p>
+								<p class="estate__views">89 просмотров</p>
+							</div>
+							<div class="estate__estate-info estate-info">
+								<h6 class="estate-info__title">Четырёхкомнатная квартира
+									в Ялте, Приморский парк</h6>
+								<div class="estate-info__items">
+									<div class="estate-info__row">
+										<div class="estate-info__item">
+											<div class="estate-info__img">
+												<img src="img/estate/info/1.svg " alt="Image">
+											</div>
+											<div class="estate-info__texts">
+												<p class="estate-info__type">Недвижимость:</p>
+												<p class="estate-info__value">Квартира</p>
+											</div>
+										</div>
+										<div class="estate-info__item">
+											<div class="estate-info__img">
+												<img src="img/estate/info/2.svg " alt="Image">
+											</div>
+											<div class="estate-info__texts">
+												<p class="estate-info__type">Стоимость:</p>
+												<p class="estate-info__value">154 442 230 руб.</p>
+											</div>
+										</div>
+									</div>
+									<div class="estate-info__row">
+										<div class="estate-info__item">
+											<div class="estate-info__img">
+												<img src="img/estate/info/3.svg " alt="Image">
+											</div>
+											<div class="estate-info__texts">
+												<p class="estate-info__type">Спален:</p>
+												<p class="estate-info__value">4</p>
+											</div>
+										</div>
+										<div class="estate-info__item">
+											<div class="estate-info__img">
+												<img src="img/estate/info/4.svg " alt="Image">
+											</div>
+											<div class="estate-info__texts">
+												<p class="estate-info__type">Площадь:</p>
+												<p class="estate-info__value">237.70 м <sup>2</sup></p>
+											</div>
+										</div>
+										<div class="estate-info__item">
+											<div class="estate-info__img">
+												<img src="img/estate/info/5.svg " alt="Image">
+											</div>
+											<div class="estate-info__texts">
+												<p class="estate-info__type">Этаж:</p>
+												<p class="estate-info__value">12/16</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</a>
-						<!--                   <a href="#" class="estate__item estate__hover">
-                     <picture><source srcset="img/service/2.webp" type="image/webp"><img class="cards__img" src="img/service/2.jpg" alt="Image"></picture>
-                     <div class="cards__plate service__plate">
-                        <div class="service__name">Студия дизайна CGM</div>
-                        <div class="service__text">Мы любим изнаем своё дело.
-                           Давайте встретимся!</div>
-                        <div class="service__reviews">38 отзывов</div>
-                     </div>
-                  </a> -->
+						<a href="#" class="estate__item estate__hover">
+							<div class="estate__img">
+								<picture><source srcset="img/estate/3.webp" type="image/webp"><img class="estate__img" src="img/estate/3.jpg" alt="Image"></picture>
+								<p class="estate__update">Обновлено: 29.01.2024</p>
+								<p class="estate__views">89 просмотров</p>
+							</div>
+							<div class="estate__estate-info estate-info">
+								<h6 class="estate-info__title">Четырёхкомнатная квартира
+									в Ялте, Приморский парк</h6>
+								<div class="estate-info__items">
+									<div class="estate-info__row">
+										<div class="estate-info__item">
+											<div class="estate-info__img">
+												<img src="img/estate/info/1.svg " alt="Image">
+											</div>
+											<div class="estate-info__texts">
+												<p class="estate-info__type">Недвижимость:</p>
+												<p class="estate-info__value">Квартира</p>
+											</div>
+										</div>
+										<div class="estate-info__item">
+											<div class="estate-info__img">
+												<img src="img/estate/info/2.svg " alt="Image">
+											</div>
+											<div class="estate-info__texts">
+												<p class="estate-info__type">Стоимость:</p>
+												<p class="estate-info__value">154 442 230 руб.</p>
+											</div>
+										</div>
+									</div>
+									<div class="estate-info__row">
+										<div class="estate-info__item">
+											<div class="estate-info__img">
+												<img src="img/estate/info/3.svg " alt="Image">
+											</div>
+											<div class="estate-info__texts">
+												<p class="estate-info__type">Спален:</p>
+												<p class="estate-info__value">4</p>
+											</div>
+										</div>
+										<div class="estate-info__item">
+											<div class="estate-info__img">
+												<img src="img/estate/info/4.svg " alt="Image">
+											</div>
+											<div class="estate-info__texts">
+												<p class="estate-info__type">Площадь:</p>
+												<p class="estate-info__value">237.70 м <sup>2</sup></p>
+											</div>
+										</div>
+										<div class="estate-info__item">
+											<div class="estate-info__img">
+												<img src="img/estate/info/5.svg " alt="Image">
+											</div>
+											<div class="estate-info__texts">
+												<p class="estate-info__type">Этаж:</p>
+												<p class="estate-info__value">12/16</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
 					</div>
+					<button class="estate__more _transparent-btn">Показать еще</button>
 				</div>
 			</section>
 			<section class="form">
@@ -506,8 +677,8 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://unpkg.com/imask?_v=20240305195800"></script>
-	<script src="js/app.min.js?_v=20240305195800"></script>
+	<script src="https://unpkg.com/imask?_v=20240307151433"></script>
+	<script src="js/app.min.js?_v=20240307151433"></script>
 </body>
 
 </html>
