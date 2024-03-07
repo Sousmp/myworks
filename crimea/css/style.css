@@ -2368,8 +2368,8 @@ html.pc .photos__arrow:hover {
   max-width: 540px;
 }
 
-.filter__item:not(:first-child) {
-  padding-top: 20px;
+.filter__item:not(:last-child) {
+  padding-bottom: 20px;
 }
 
 .filter__first {
@@ -3629,8 +3629,8 @@ html.pc .form-review__submit._active:hover {
     padding-top: 40px;
   }
 
-  .filter__item:not(:first-child) {
-    padding-top: 14px;
+  .filter__item:not(:last-child) {
+    padding-bottom: 14px;
   }
 
   .filter__form {
@@ -4049,8 +4049,8 @@ html.pc .form-review__submit._active:hover {
             flex: 0 0 calc(33.3333% - 13.333px);
   }
 
-  .filter__item:not(:first-child) {
-    padding-top: 0;
+  .filter__item:not(:last-child) {
+    padding-bottom: 0px;
   }
 
   .filter__right-column {
@@ -4372,8 +4372,8 @@ html.pc .form-review__submit._active:hover {
     height: 10px;
   }
 
-  .filter__item:not(:first-child) {
-    padding-top: 10px;
+  .filter__item:not(:last-child) {
+    padding-bottom: 10px;
   }
 
   .filter__search {

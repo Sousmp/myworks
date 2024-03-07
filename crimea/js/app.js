@@ -1136,6 +1136,39 @@
         }
     }
     modules_flsModules.select = new SelectConstructor({});
+    document.addEventListener("selectCallback", (function(e) {
+        const currentSelect = e.detail.select;
+        if (currentSelect.value === "residential") {
+            document.querySelector(".filter__bedroom-box").hidden = false;
+            document.querySelector(".filter__room-box").hidden = true;
+            document.querySelector(".filter__comunications-box").hidden = true;
+            document.querySelector(".filter__residential-type-box").hidden = false;
+            document.querySelector(".filter__commercial-type-box").hidden = true;
+            document.querySelector(".filter__plot-type-box").hidden = true;
+            document.querySelector(".filter__repair-box").hidden = false;
+            document.querySelector(".filter__buildings-box").hidden = true;
+        }
+        if (currentSelect.value === "commercial") {
+            document.querySelector(".filter__bedroom-box").hidden = true;
+            document.querySelector(".filter__room-box").hidden = false;
+            document.querySelector(".filter__comunications-box").hidden = true;
+            document.querySelector(".filter__residential-type-box").hidden = true;
+            document.querySelector(".filter__commercial-type-box").hidden = false;
+            document.querySelector(".filter__plot-type-box").hidden = true;
+            document.querySelector(".filter__repair-box").hidden = false;
+            document.querySelector(".filter__buildings-box").hidden = true;
+        }
+        if (currentSelect.value === "plot") {
+            document.querySelector(".filter__bedroom-box").hidden = true;
+            document.querySelector(".filter__room-box").hidden = true;
+            document.querySelector(".filter__comunications-box").hidden = false;
+            document.querySelector(".filter__residential-type-box").hidden = true;
+            document.querySelector(".filter__commercial-type-box").hidden = true;
+            document.querySelector(".filter__plot-type-box").hidden = false;
+            document.querySelector(".filter__repair-box").hidden = true;
+            document.querySelector(".filter__buildings-box").hidden = false;
+        }
+    }));
     var PipsMode;
     (function(PipsMode) {
         PipsMode["Range"] = "range";
@@ -6576,7 +6609,7 @@
             if (event.target.value.length === 0) placeholder.style.opacity = "1"; else placeholder.style.opacity = "0";
         }));
         var parentElement = document.querySelector(".select_filter__currency");
-        parentElement.addEventListener("change", (function(event) {
+        if (parentElement) parentElement.addEventListener("change", (function(event) {
             var target = event.target;
             if (target && target.matches(".filter__currency")) {
                 var selectedOption = target.options[target.selectedIndex];

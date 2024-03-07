@@ -15,7 +15,7 @@
 	<meta name="msapplication-config" content="https://sousmp.github.io/myworks/crimea/browserconfig.xml">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240307151433">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240307164404">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -100,16 +100,16 @@
 									<div class="filter__item">
 										<div class="filter__select">
 											<select name="" id="" class="filter__estate">
-												<option value="1">Жилая</option>
-												<option value="2">Коммерческая</option>
-												<option value="3">Участок</option>
+												<option value="residential">Жилая</option>
+												<option value="commercial">Коммерческая</option>
+												<option value="plot">Участок</option>
 											</select>
 										</div>
 										<p class="filter__name">Недвижимость</p>
 									</div>
-									<div class="filter__item">
+									<div class="filter__item filter__bedroom-box">
 										<div class="filter__select">
-											<select name="" id="" class="filter__room">
+											<select name="" id="" class="filter__bedroom">
 												<option value="1">2 спальни</option>
 												<option value="2">1 спальня</option>
 												<option value="3">3 и более</option>
@@ -117,20 +117,40 @@
 										</div>
 										<p class="filter__name">Кол-во спален</p>
 									</div>
-
+									<div hidden class="filter__item filter__room-box">
+										<div class="filter__select">
+											<select name="" id="" class="filter__room">
+												<option value="1">6 помещений</option>
+												<option value="2">4 помещения</option>
+												<option value="3">2 помещения</option>
+											</select>
+										</div>
+										<p class="filter__name">Кол-во помещения</p>
+									</div>
+									<div hidden class="filter__item filter__comunications-box">
+										<div class="filter__select">
+											<select name="" id="" class="filter__comunications">
+												<option value="1">Газ, вода, эл-во</option>
+												<option value="1">Газ</option>
+												<option value="1">Вода</option>
+												<option value="1">Эл-во</option>
+											</select>
+										</div>
+										<p class="filter__name">Коммуникации</p>
+									</div>
 									<div class="filter__item">
 										<div class="filter__range">
 											<p><span class="filter__value filter__area-value"></span> м<sup>2</sup></p>
 											<!-- Вся логика инпутов с ползунком осуществляется в файле files/forms/range.js -->
 											<div class="filter__area"></div>
 										</div>
-										<p class="filter__name">Метраж</p>
+										<p class="filter__name">Метраж до</p>
 									</div>
 								</div>
 								<div class="filter__right-column">
-									<div class="filter__item">
+									<div class="filter__item filter__residential-type-box">
 										<div class="filter__select">
-											<select name="" id="" class="filter__type">
+											<select name="" id="" class="filter__residential-type">
 												<option value="1">Квартира</option>
 												<option value="2">Дом</option>
 												<option value="3">Таунхауз</option>
@@ -138,7 +158,27 @@
 										</div>
 										<p class="filter__name">Тип</p>
 									</div>
-									<div class="filter__item">
+									<div hidden class="filter__item filter__commercial-type-box">
+										<div class="filter__select">
+											<select name="" id="" class="filter__commercial-type">
+												<option value="1">Магазин</option>
+												<option value="2">Кафэ</option>
+												<option value="3">Склад</option>
+											</select>
+										</div>
+										<p class="filter__name">Назначение</p>
+									</div>
+									<div hidden class="filter__item filter__plot-type-box">
+										<div class="filter__select">
+											<select name="" id="" class="filter__plot-type">
+												<option value="1">Жилая</option>
+												<option value="2">Коммерческая</option>
+												<option value="3">Сельхоз</option>
+											</select>
+										</div>
+										<p class="filter__name">Назначение</p>
+									</div>
+									<div class="filter__item filter__repair-box">
 										<div class="filter__select">
 											<select name="" id="" class="filter__repair">
 												<option value="1">С ремонтом</option>
@@ -146,6 +186,15 @@
 											</select>
 										</div>
 										<p class="filter__name">Состояние</p>
+									</div>
+									<div hidden class="filter__item filter__buildings-box">
+										<div class="filter__select">
+											<select name="" id="" class="filter__buildings">
+												<option value="1">Есть</option>
+												<option value="2">Нет</option>
+											</select>
+										</div>
+										<p class="filter__name">Строения</p>
 									</div>
 									<div class="filter__item">
 										<div class="filter__range">
@@ -677,8 +726,8 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://unpkg.com/imask?_v=20240307151433"></script>
-	<script src="js/app.min.js?_v=20240307151433"></script>
+	<script src="https://unpkg.com/imask?_v=20240307164404"></script>
+	<script src="js/app.min.js?_v=20240307164404"></script>
 </body>
 
 </html>
