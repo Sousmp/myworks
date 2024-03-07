@@ -993,6 +993,8 @@
             this.getSelectedOptionsData(originalSelect).values.length ? selectItem.classList.add(this.selectClasses.classSelectActive) : selectItem.classList.remove(this.selectClasses.classSelectActive);
             if (originalSelect.hasAttribute("data-search")) return `<div class="${this.selectClasses.classSelectTitle}"><span${pseudoAttribute} class="${this.selectClasses.classSelectValue}"><input autocomplete="off" type="text" placeholder="${selectTitleValue}" data-placeholder="${selectTitleValue}" class="${this.selectClasses.classSelectInput}"></span></div>`; else {
                 const customClass = this.getSelectedOptionsData(originalSelect).elements.length && this.getSelectedOptionsData(originalSelect).elements[0].dataset.class ? ` ${this.getSelectedOptionsData(originalSelect).elements[0].dataset.class}` : "";
+                const currencyShow = document.getElementById("currency-show");
+                if (originalSelect.classList.contains("filter__currency")) currencyShow.textContent = ` ${selectTitleValue}`;
                 return `<button type="button" class="${this.selectClasses.classSelectTitle}"><span${pseudoAttribute} class="${this.selectClasses.classSelectValue}${pseudoAttributeClass}"><span class="${this.selectClasses.classSelectContent}${customClass}">${selectTitleValue}</span></span></button>`;
             }
         }
@@ -2650,12 +2652,12 @@
         var rangePrice = document.querySelector(".filter__price");
         if (rangePrice) {
             var slider = initialize(rangePrice, {
-                start: [ 2e6 ],
+                start: [ 1e7 ],
                 connect: [ true, false ],
                 step: 100,
                 range: {
                     min: [ 1e6 ],
-                    max: [ 9e6 ]
+                    max: [ 3e7 ]
                 },
                 format: {
                     to: function(value) {
@@ -2678,6 +2680,55 @@
             var rangeSliderPriceValue = document.querySelector(".filter__price-value");
             rangePrice.noUiSlider.on("update", (function(values, handle) {
                 rangeSliderPriceValue.innerHTML = values[handle];
+            }));
+            document.addEventListener("selectCallback", (function(e) {
+                const currentSelect = e.detail.select;
+                const rangePrice = document.querySelector(".filter__price");
+                const selectedCurrency = currentSelect.value;
+                if (rangePrice && selectedCurrency) {
+                    var slider = rangePrice.noUiSlider;
+                    switch (selectedCurrency) {
+                      case "rub":
+                        slider.updateOptions({
+                            range: {
+                                min: [ 1e6 ],
+                                max: [ 3e7 ]
+                            },
+                            start: [ 1e7 ]
+                        });
+                        break;
+
+                      case "usd":
+                        slider.updateOptions({
+                            range: {
+                                min: [ 1e4 ],
+                                max: [ 3e5 ]
+                            },
+                            start: [ 1e5 ]
+                        });
+                        break;
+
+                      case "eur":
+                        slider.updateOptions({
+                            range: {
+                                min: [ 1e4 ],
+                                max: [ 3e5 ]
+                            },
+                            start: [ 1e5 ]
+                        });
+                        break;
+
+                      default:
+                        break;
+                    }
+                }
+            }));
+            function formatNumberWithSpaces(number) {
+                return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+            }
+            rangePrice.noUiSlider.on("update", (function(values, handle) {
+                var formattedValue = formatNumberWithSpaces(values[handle]);
+                rangeSliderPriceValue.innerHTML = formattedValue;
             }));
         }
     }
@@ -6521,8 +6572,23 @@
         if (animBlock && animBlock.classList.contains("anim__second")) header.classList.add("header__second");
         const input = document.querySelector(".form-review__service");
         const placeholder = document.querySelector(".form-review__placeholder");
-        input.addEventListener("input", (function(event) {
+        if (input) input.addEventListener("input", (function(event) {
             if (event.target.value.length === 0) placeholder.style.opacity = "1"; else placeholder.style.opacity = "0";
+        }));
+        var parentElement = document.querySelector(".select_filter__currency");
+        parentElement.addEventListener("change", (function(event) {
+            var target = event.target;
+            if (target && target.matches(".filter__currency")) {
+                var selectedOption = target.options[target.selectedIndex];
+                console.log(selectedOption.value);
+            }
+        }));
+        document.addEventListener("DOMContentLoaded", (function() {
+            var currencySelect = document.querySelector(".filter__currency");
+            currencySelect.addEventListener("change", (function() {
+                var selectedOption = currencySelect.options[currencySelect.selectedIndex];
+                currencyShow.textContent = selectedOption.value;
+            }));
         }));
     }));
     document.addEventListener("DOMContentLoaded", (function() {
@@ -6641,13 +6707,6 @@
                 event.preventDefault();
                 return false;
             }
-        }));
-    }));
-    document.addEventListener("DOMContentLoaded", (function() {
-        const myInput = document.querySelector(".filter__search");
-        const myForm = document.querySelector(".filter__form");
-        myInput.addEventListener("change", (function() {
-            myForm.submit();
         }));
     }));
     window["FLS"] = false;

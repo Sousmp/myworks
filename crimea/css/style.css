@@ -2204,7 +2204,8 @@ html.pc .photos__arrow:hover {
 }
 
 .estate {
-  padding-top: 80px;
+  padding-top: 5rem;
+  padding-bottom: 2.5rem;
 }
 
 .estate__items {
@@ -2213,7 +2214,15 @@ html.pc .photos__arrow:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 30px;
+  gap: 1.875rem;
+}
+
+.estate__more {
+  margin: 100px auto 0 auto;
+}
+
+.estate__request {
+  margin-top: 50px;
 }
 
 .estate__item {
@@ -2222,8 +2231,16 @@ html.pc .photos__arrow:hover {
           flex: 0 0 calc(50% - 15px);
 }
 
-.estate__filter {
-  margin-top: 170px;
+@supports (margin-top: clamp( 7.5rem , 5.4166666667rem  +  4.3402777778vw , 10.625rem )) {
+  .estate__filter {
+    margin-top: clamp( 7.5rem , 5.4166666667rem  +  4.3402777778vw , 10.625rem );
+  }
+}
+
+@supports not (margin-top: clamp( 7.5rem , 5.4166666667rem  +  4.3402777778vw , 10.625rem )) {
+  .estate__filter {
+    margin-top: calc(7.5rem + 3.125 * (100vw - 48rem) / 72);
+  }
 }
 
 .estate__hover {
@@ -2235,6 +2252,110 @@ html.pc .photos__arrow:hover {
   background-color: rgba(165, 117, 64, 0.8);
   width: 100%;
   height: 295px;
+}
+
+.estate__img {
+  position: relative;
+}
+
+.estate__img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.estate__update {
+  position: absolute;
+  color: #9c9c9c;
+  bottom: 1.875rem;
+  left: 1.875rem;
+  font-weight: 600;
+  font-size: 0.625rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.estate__views {
+  position: absolute;
+  bottom: 1.875rem;
+  right: 1.875rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+  padding: 0.75rem;
+  color: #192d22;
+  background-color: #dfc58a;
+  border-radius: 1.875rem;
+  line-height: 90%;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.estate-info {
+  padding: 1.875rem;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: rgba(165, 117, 64, 0.8);
+}
+
+.estate-info__title {
+  font-weight: 700;
+  font-size: 2.125rem;
+  border-bottom: 1px solid #dfc58a;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  padding-bottom: 1.875rem;
+}
+
+.estate-info__items {
+  padding-top: 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.5625rem;
+}
+
+.estate-info__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.9375rem;
+}
+
+.estate-info__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.875rem;
+}
+
+.estate-info__type {
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 130%;
+  letter-spacing: 0.02em;
+}
+
+.estate-info__value {
+  white-space: nowrap;
+  position: relative;
+  font-weight: 700;
+  font-size: 1.5625rem;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+}
+
+.estate-info__value sup {
+  top: -7px;
+  font-size: 0.9375rem;
+  position: absolute;
 }
 
 .filter__form {
@@ -2299,6 +2420,24 @@ html.pc .photos__arrow:hover {
   position: absolute;
 }
 
+.filter .select__option {
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+html.pc .filter .select__option:hover {
+  color: #f7f3e3;
+}
+
+.filter .select__content {
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+html.pc .filter .select__title:hover .select__content {
+  color: #f7f3e3;
+}
+
 .filter__currency-select .select._select-open .select__options {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2314,10 +2453,29 @@ html.pc .photos__arrow:hover {
   display: flex;
 }
 
+.filter__currency-select .select__title {
+  padding: 0 7px;
+}
+
 .filter__currency-select .select__option {
   font-size: 20px;
   padding: 5px;
   margin-left: 15px;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.filter__currency-select .select__value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter__currency-select .select__options {
+  margin-right: 5px;
 }
 
 .filter__currency-select .select__options._slide {
@@ -2338,7 +2496,7 @@ html.pc .photos__arrow:hover {
   display: -ms-flexbox;
   display: flex;
   max-height: 54px;
-  padding: 7px 17px;
+  padding: 7px 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2420,6 +2578,17 @@ html.pc .photos__arrow:hover {
   margin-bottom: 16px;
 }
 
+.filter__text {
+  padding-top: 50px;
+  font-size: 1rem;
+  line-height: 160%;
+  letter-spacing: 0.02em;
+}
+
+.filter__text span {
+  color: #dfc58a;
+}
+
 .filter__select {
   position: relative;
   border: 1px solid #a57540;
@@ -2454,6 +2623,15 @@ html.pc .photos__arrow:hover {
   display: block;
   border-top: 2px solid #dfc58a;
   border-right: 2px solid #dfc58a;
+}
+
+.filter__select .select .select__value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .filter__select .select__content {
@@ -3115,6 +3293,56 @@ html.pc .form-review__submit._active:hover {
   html._scroll .service__title span {
     font-size: 2.5rem;
   }
+
+  .estate__views {
+    font-size: 1rem;
+  }
+
+  .estate-info {
+    padding: 1.25rem;
+  }
+
+@supports (font-size: clamp( 1.25rem , -0.224702381rem  +  2.380952381vw , 1.5625rem )) {
+    .estate-info__value {
+      font-size: clamp( 1.25rem , -0.224702381rem  +  2.380952381vw , 1.5625rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.25rem , -0.224702381rem  +  2.380952381vw , 1.5625rem )) {
+    .estate-info__value {
+      font-size: calc(1.25rem + 0.3125 * (100vw - 61.9375rem) / 13.125);
+    }
+}
+
+  .estate-info__items {
+    gap: 1.25rem;
+  }
+
+@supports (font-size: clamp( 1.5625rem , -1.0919642857rem  +  4.2857142857vw , 2.125rem )) {
+    .estate-info__title {
+      font-size: clamp( 1.5625rem , -1.0919642857rem  +  4.2857142857vw , 2.125rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.5625rem , -1.0919642857rem  +  4.2857142857vw , 2.125rem )) {
+    .estate-info__title {
+      font-size: calc(1.5625rem + 0.5625 * (100vw - 61.9375rem) / 13.125);
+    }
+}
+
+  .estate-info__row {
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 61.9375em) {
+  .estate-info__value {
+    font-size: inherit;
+  }
+
+  .estate-info__title {
+    font-size: inherit;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -3311,6 +3539,198 @@ html.pc .form-review__submit._active:hover {
     padding-top: 3.75rem;
   }
 
+  .estate__more {
+    margin-top: 60px;
+  }
+
+  .estate__items {
+    gap: 1.25rem;
+  }
+
+  .estate__request {
+    margin-top: 1.875rem;
+  }
+
+  .estate__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 10px);
+            flex: 0 0 calc(50% - 10px);
+  }
+
+  .estate__request {
+    display: none;
+  }
+
+  .estate__update {
+    bottom: 1.25rem;
+    left: 1.25rem;
+    font-size: 0.5rem;
+  }
+
+  .estate__views {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    font-size: 0.75rem;
+  }
+
+@supports (font-size: clamp( 1.125rem , -0.3663888889rem  +  3.1111111111vw , 1.5625rem )) {
+    .estate-info__title {
+      font-size: clamp( 1.125rem , -0.3663888889rem  +  3.1111111111vw , 1.5625rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.125rem , -0.3663888889rem  +  3.1111111111vw , 1.5625rem )) {
+    .estate-info__title {
+      font-size: calc(1.125rem + 0.4375 * (100vw - 47.9375rem) / 14.0625);
+    }
+}
+
+@supports (font-size: clamp( 0.9375rem , -0.1277777778rem  +  2.2222222222vw , 1.25rem )) {
+    .estate-info__value {
+      font-size: clamp( 0.9375rem , -0.1277777778rem  +  2.2222222222vw , 1.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.9375rem , -0.1277777778rem  +  2.2222222222vw , 1.25rem )) {
+    .estate-info__value {
+      font-size: calc(0.9375rem + 0.3125 * (100vw - 47.9375rem) / 14.0625);
+    }
+}
+
+  .estate-info__type {
+    font-size: 0.625rem;
+  }
+
+  .estate-info__row {
+    gap: 0.9375rem;
+  }
+
+  .estate-info__img img {
+    width: 1.875rem;
+  }
+
+@supports (width: clamp( 1.875rem , -0.2555555556rem  +  4.4444444444vw , 2.5rem )) {
+    .estate-info__img img {
+      width: clamp( 1.875rem , -0.2555555556rem  +  4.4444444444vw , 2.5rem );
+    }
+}
+
+@supports not (width: clamp( 1.875rem , -0.2555555556rem  +  4.4444444444vw , 2.5rem )) {
+    .estate-info__img img {
+      width: calc(1.875rem + 0.625 * (100vw - 47.9375rem) / 14.0625);
+    }
+}
+
+  .estate-info__item {
+    gap: 0.625rem;
+  }
+
+  .filter__text {
+    padding-top: 40px;
+  }
+
+  .filter__item:not(:first-child) {
+    padding-top: 14px;
+  }
+
+  .filter__form {
+    gap: 15px;
+  }
+
+  .filter__first {
+    gap: 15px;
+  }
+
+  .filter__left-column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 7.5px);
+            flex: 0 0 calc(50% - 7.5px);
+  }
+
+  .filter__right-column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 7.5px);
+            flex: 0 0 calc(50% - 7.5px);
+  }
+
+  .filter__name {
+    padding-top: 6px;
+    padding-left: 20px;
+  }
+
+  .filter__currency-name {
+    padding-top: 6px;
+  }
+
+  .filter__select {
+    padding: 0px 15px 0px 15px;
+  }
+
+  .filter__select .select__body {
+    padding: 6px 0;
+  }
+
+  .filter .select__content {
+    font-size: 0.875rem;
+  }
+
+  .filter .select__option {
+    margin-top: 5px;
+    font-size: 0.875rem;
+  }
+
+  .filter .select__title::after {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+
+  .filter .select._select-open .select__title::after {
+    -webkit-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+            transform: rotate(135deg);
+    top: 6px;
+  }
+
+  .filter__currency-select {
+    max-height: 2.75rem;
+  }
+
+  .filter__currency-select .select__option {
+    margin: 0px 0 0 10px;
+  }
+
+  .filter__currency-select .select__title {
+    padding: 0 4px;
+  }
+
+  .filter__input svg {
+    right: 15px;
+  }
+
+  .filter__search {
+    font-size: 0.875rem;
+    padding: 10px 15px;
+  }
+
+  .filter__currency-select .select__content {
+    font-size: 1.375rem;
+  }
+
+  .filter__range {
+    height: 44px;
+    padding: 0px 15px 0px 15px;
+  }
+
+  .filter__range p {
+    font-size: 0.875rem;
+    margin-bottom: 11px;
+  }
+
+  .filter__value {
+    font-size: 0.875rem;
+  }
+
   .footer__icon {
     display: none;
   }
@@ -3327,6 +3747,18 @@ html.pc .form-review__submit._active:hover {
 
   html._anim .service__title._line-break span {
     font-size: inherit;
+  }
+
+  .estate-info__title {
+    font-size: inherit;
+  }
+
+  .estate-info__value {
+    font-size: inherit;
+  }
+
+  .estate-info__img img {
+    width: inherit;
   }
 }
 
@@ -3518,6 +3950,119 @@ html.pc .form-review__submit._active:hover {
     max-width: 320px;
   }
 
+  .estate {
+    padding-bottom: 1.25rem;
+    padding-top: 0px;
+  }
+
+  .estate__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+
+  .estate__filter {
+    padding-top: 0;
+  }
+
+  .estate__update {
+    font-size: 0.625rem;
+    left: 1.875rem;
+  }
+
+  .estate__views {
+    font-size: 1.25rem;
+    right: 1.875rem;
+  }
+
+  .estate-info__title {
+    font-size: 2.125rem;
+    padding-bottom: 1.875rem;
+  }
+
+  .estate-info__items {
+    padding-top: 1.875rem;
+    gap: 1.5625rem;
+  }
+
+  .estate-info__item {
+    gap: 0.9375rem;
+  }
+
+  .estate-info__row {
+    gap: 1.875rem;
+  }
+
+  .estate-info__type {
+    font-size: 0.8125rem;
+  }
+
+  .estate-info__value {
+    font-size: 1.5625rem;
+  }
+
+  .filter__form {
+    max-width: 100%;
+  }
+
+  .filter__first {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+  }
+
+  .filter__left-column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20px;
+  }
+
+  .filter__right-column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20px;
+  }
+
+  .filter__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(33.3333% - 13.333px);
+            flex: 0 0 calc(33.3333% - 13.333px);
+  }
+
+  .filter__item:not(:first-child) {
+    padding-top: 0;
+  }
+
+  .filter__right-column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+
+  .filter__text {
+    padding-bottom: 10px;
+  }
+
   .footer__links {
     gap: 15px;
   }
@@ -3561,6 +4106,12 @@ html.pc .form-review__submit._active:hover {
 @media (max-width: 768px) and (max-width: 22.5em) {
   .photos__slide {
     max-height: inherit;
+  }
+}
+
+@media (max-width: 48em) {
+  .estate__filter {
+    margin-top: inherit;
   }
 }
 
@@ -3674,6 +4225,185 @@ html.pc .form-review__submit._active:hover {
     padding-top: 1.875rem;
   }
 
+  .estate__more {
+    margin-top: 30px;
+  }
+
+  .estate__items {
+    gap: 1.25rem;
+  }
+
+  .estate__update {
+    font-size: 0.4375rem;
+    left: 1.25rem;
+  }
+
+  .estate__views {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    right: 1.25rem;
+  }
+
+  .estate-info__title {
+    padding-bottom: 1.25rem;
+  }
+
+@supports (font-size: clamp( 1.125rem , 0.585266323rem  +  2.4054982818vw , 1.5625rem )) {
+    .estate-info__title {
+      font-size: clamp( 1.125rem , 0.585266323rem  +  2.4054982818vw , 1.5625rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.125rem , 0.585266323rem  +  2.4054982818vw , 1.5625rem )) {
+    .estate-info__title {
+      font-size: calc(1.125rem + 0.4375 * (100vw - 22.4375rem) / 18.1875);
+    }
+}
+
+@supports (font-size: clamp( 0.9375rem , 0.551975945rem  +  1.7182130584vw , 1.25rem )) {
+    .estate-info__value {
+      font-size: clamp( 0.9375rem , 0.551975945rem  +  1.7182130584vw , 1.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.9375rem , 0.551975945rem  +  1.7182130584vw , 1.25rem )) {
+    .estate-info__value {
+      font-size: calc(0.9375rem + 0.3125 * (100vw - 22.4375rem) / 18.1875);
+    }
+}
+
+  .estate-info__value sup {
+    font-size: 0.625rem;
+  }
+
+  .estate-info__type {
+    font-size: 0.625rem;
+  }
+
+  .estate-info__row {
+    gap: 0.9375rem;
+  }
+
+  .estate-info__img img {
+    width: 1.875rem;
+  }
+
+@supports (width: clamp( 1.875rem , 1.10395189rem  +  3.4364261168vw , 2.5rem )) {
+    .estate-info__img img {
+      width: clamp( 1.875rem , 1.10395189rem  +  3.4364261168vw , 2.5rem );
+    }
+}
+
+@supports not (width: clamp( 1.875rem , 1.10395189rem  +  3.4364261168vw , 2.5rem )) {
+    .estate-info__img img {
+      width: calc(1.875rem + 0.625 * (100vw - 22.4375rem) / 18.1875);
+    }
+}
+
+  .estate-info__items {
+    padding-top: 1.25rem;
+  }
+
+  .estate-info__item {
+    gap: 0.625rem;
+  }
+
+  .filter__text {
+    font-size: 0.8125rem;
+    padding-top: 20px;
+  }
+
+  .filter__first {
+    gap: 10px;
+  }
+
+  .filter__select {
+    border-radius: 20px;
+  }
+
+  .filter__currency-select {
+    padding: 5px 8px;
+  }
+
+  .filter__left-column {
+    display: block;
+  }
+
+  .filter__right-column {
+    display: block;
+  }
+
+  .filter__name {
+    font-size: 0.5rem;
+  }
+
+  .filter__currency-name {
+    font-size: 0.5rem;
+  }
+
+  .filter .select__content {
+    font-size: 0.75rem;
+  }
+
+  .filter .select__option {
+    font-size: 0.75rem;
+  }
+
+  .filter__form {
+    gap: 10px;
+  }
+
+  .filter__left-column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 5px);
+            flex: 0 0 calc(50% - 5px);
+  }
+
+  .filter__right-column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 5px);
+            flex: 0 0 calc(50% - 5px);
+  }
+
+  .filter .select__title::after {
+    top: 10px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+  }
+
+  .filter__item:not(:first-child) {
+    padding-top: 10px;
+  }
+
+  .filter__search {
+    font-size: 0.8125rem;
+  }
+
+  .filter__value {
+    font-size: 0.75rem;
+  }
+
+  .filter__currency-select .select__content {
+    font-size: 1.25rem;
+  }
+
+  .filter__select {
+    border-radius: 20px;
+  }
+
+  .filter__select .select__body {
+    padding: 5px 0;
+  }
+
+  .filter__range {
+    height: 39px;
+  }
+
+  .filter__range p {
+    font-size: 0.75rem;
+  }
+
   .footer {
     padding: 30px 0;
   }
@@ -3767,9 +4497,33 @@ html.pc .form-review__submit._active:hover {
   }
 }
 
+@media (max-width: 650px) and (max-width: 22.4375em) {
+  .estate-info__title {
+    font-size: inherit;
+  }
+
+  .estate-info__value {
+    font-size: inherit;
+  }
+
+  .estate-info__img img {
+    width: inherit;
+  }
+}
+
 @media (max-width: 650px) and (max-width: 22.5em) {
   .form-review__title {
     font-size: inherit;
+  }
+}
+
+@media (max-width: 450px) {
+  .estate__container {
+    padding: 0;
+  }
+
+  .estate__filter {
+    padding: 0 20px;
   }
 }
 
@@ -3800,6 +4554,31 @@ html.pc .form-review__submit._active:hover {
 
   html._scroll .cards__title._line-break span {
     font-size: 1rem !important;
+  }
+
+  .estate-info__img img {
+    width: 1.875rem;
+  }
+
+  .estate-info__item {
+    gap: 0.4375rem;
+  }
+
+  .estate-info__row {
+    gap: 0.625rem;
+  }
+
+  .estate-info__title {
+    font-size: 1.125rem;
+  }
+
+  .estate-info__value {
+    font-size: 0.875rem;
+  }
+
+  .filter__search {
+    padding: 11px 15px;
+    font-size: 0.6875rem;
   }
 }
 
@@ -4815,6 +5594,18 @@ html.pc .form-review__submit._active:hover {
   html._anim .service__title._line-break span {
     font-size: inherit;
   }
+
+  .estate-info__title {
+    font-size: inherit;
+  }
+
+  .estate-info__value {
+    font-size: inherit;
+  }
+
+  .estate-info__img img {
+    width: inherit;
+  }
 }
 
 @media (max-width: 768px) and (min-width: 48.0625em) {
@@ -4934,5 +5725,29 @@ html.pc .form-review__submit._active:hover {
 
   .form-review__title {
     font-size: inherit;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 75.0625em) {
+  .estate-info__value {
+    font-size: inherit;
+  }
+
+  .estate-info__title {
+    font-size: inherit;
+  }
+}
+
+@media (max-width: 650px) and (min-width: 40.625em) {
+  .estate-info__title {
+    font-size: inherit;
+  }
+
+  .estate-info__value {
+    font-size: inherit;
+  }
+
+  .estate-info__img img {
+    width: inherit;
   }
 }
