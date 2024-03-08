@@ -1267,7 +1267,7 @@ html.pc .cards__hover:hover .cards__plate {
 
 .full-review__content {
   background-color: transparent;
-  padding: 0;
+  padding: 0 !important;
   max-width: 600px;
 }
 
