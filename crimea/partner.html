@@ -15,7 +15,7 @@
 	<meta name="msapplication-config" content="https://sousmp.github.io/myworks/crimea/browserconfig.xml">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240307151433">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240308023408">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -159,7 +159,7 @@
 										<p class="reviews__text">Ремонт с этой компанией превзошел мои ожидания. Профессиональный подход, точность в сроках и качественное исполнение работ поразили меня. Каждый этап ремонта осуществлялся с учетом моих предпочтений, что создало уютную и стильную атмосферу в
 											квартире. Без сомнений, рекомендую эту команду для всех, кто ищет надежных исполнителей.</p>
 										<div class="reviews__more">
-											<a href="#" class="reviews__btn">Подробнее</a>
+											<button data-popup="#full-review" class="reviews__btn">Подробнее</button>
 										</div>
 									</div>
 									<div class="reviews__user user">
@@ -183,7 +183,7 @@
 										<p class="reviews__text">Ремонт с этой компанией превзошел мои ожидания. Профессиональный подход, точность в сроках и качественное исполнение работ поразили меня. Каждый этап ремонта осуществлялся с учетом моих предпочтений, что создало уютную и стильную атмосферу в
 											квартире.</p>
 										<div class="reviews__more">
-											<a href="#" class="reviews__btn">Подробнее</a>
+											<button data-popup="#full-review" class="reviews__btn">Подробнее</button>
 										</div>
 									</div>
 									<div class="reviews__user user">
@@ -206,7 +206,7 @@
 										<p class="reviews__count">105 из 148</p>
 										<p class="reviews__text">Все круто, спасибо</p>
 										<div class="reviews__more">
-											<a href="#" class="reviews__btn">Подробнее</a>
+											<button data-popup="#full-review" class="reviews__btn">Подробнее</button>
 										</div>
 									</div>
 									<div class="reviews__user user">
@@ -230,7 +230,7 @@
 										<p class="reviews__text">Ремонт с этой компанией превзошел мои ожидания. Профессиональный подход, точность в сроках и качественное исполнение работ поразили меня. Каждый этап ремонта осуществлялся с учетом моих предпочтений, что создало уютную и стильную атмосферу в
 											квартире. Без сомнений, рекомендую эту команду для всех, кто ищет надежных исполнителей.</p>
 										<div class="reviews__more">
-											<a href="#" class="reviews__btn">Подробнее</a>
+											<button data-popup="#full-review" class="reviews__btn">Подробнее</button>
 										</div>
 									</div>
 									<div class="reviews__user user">
@@ -251,10 +251,12 @@
 								<div class="reviews__slide-body">
 									<div class="reviews__review">
 										<p class="reviews__count">105 из 148</p>
-										<p class="reviews__text">Ремонт с этой компанией превзошел мои ожидания. Профессиональный подход, точность в сроках и качественное исполнение работ поразили меня. Каждый этап ремонта осуществлялся с учетом моих предпочтений, что создало уютную и стильную атмосферу в
-											квартире. Без сомнений, рекомендую эту команду для всех, кто ищет надежных исполнителей.</p>
+										<p class="reviews__text">Ремонт с этой компанией превзошел мои ожидания.Ремонт с этой компанией превзошел мои ожидания.Ремонт с этой компанией превзошел мои ожидания. Профессиональный подход, точность в сроках и качественное исполнение работ поразили меня. Каждый этап
+											ремонта осуществлялся с учетом моих предпочтений, что создало уютную и стильную атмосферу в
+											квартире. Без сомнений, рекомендую эту команду для всех, кто ищет надежных исполнителей. Ремонт с этой компанией превзошел мои ожидания. Профессиональный подход, точность в сроках и качественное исполнение работ поразили меня. Каждый этап ремонта осуществлялся с
+											учетом моих предпочтений, что создало уютную и стильную атмосферу в квартире. Без сомнений, рекомендую эту команду для всех, кто ищет надежных исполнителей. Ремонт с этой компанией превзошел мои ожидания. Профессиональный подход, точность в сроках.</p>
 										<div class="reviews__more">
-											<a href="#" class="reviews__btn">Подробнее</a>
+											<button data-popup="#full-review" class="reviews__btn">Подробнее</button>
 										</div>
 									</div>
 									<div class="reviews__user user">
@@ -355,6 +357,7 @@
 		</div>
 
 
+
 		<div id="menu" aria-hidden="true" class="popup menu">
 			<div class="popup__wrapper menu__wrapper">
 				<div class="popup__content menu">
@@ -442,9 +445,43 @@
 				</div>
 			</div>
 		</div>
+
+
+		<div id="full-review" aria-hidden="true" class="popup full-review">
+			<div class="popup__wrapper">
+				<div class="popup__content full-review__content">
+					<div class="reviews__slide-body">
+						<div class="reviews__review">
+							<p class="reviews__count">105 из 148</p>
+							<p class="reviews__text">Ремонт с этой компанией превзошел мои ожидания. Профессиональный подход, точность в сроках и качественное исполнение работ поразили меня. Каждый этап ремонта осуществлялся с учетом моих предпочтений, что создало уютную и стильную атмосферу в квартире.
+								Без
+								сомнений, рекомендую эту команду для всех, кто ищет надежных исполнителей. Ремонт с этой компанией превзошел мои ожидания. Профессиональный подход, точность в сроках и качественное исполнение работ поразили меня. Каждый этап ремонта осуществлялся с учетом моих предпочтений,
+								что
+								создало уютную и стильную атмосферу в квартире. Без сомнений, рекомендую эту команду для всех, кто ищет надежных исполнителей. Ремонт с этой компанией превзошел мои ожидания. Профессиональный подход, точность в сроках.</p>
+							<div class="reviews__more">
+								<button data-close class="popup__close reviews__btn">Закрыть</button>
+							</div>
+						</div>
+						<div class="reviews__user user">
+							<div class="user__img">
+								<picture><source srcset="img/reviews/users-avatar/1.webp" type="image/webp"><img src="img/reviews/users-avatar/1.png" alt="Image"></picture>
+							</div>
+							<div class="user__info">
+								<h6 class="user__name">Кристина Алексеева</h6>
+								<p class="user__task">Ремонт двухкомнатной квартиры</p>
+							</div>
+						</div>
+						<div class="reviews__icon">
+							<img src="img/reviews/icon.svg" alt="Image">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
-	<script src="https://unpkg.com/imask?_v=20240307151433"></script>
-	<script src="js/app.min.js?_v=20240307151433"></script>
+	<script src="https://unpkg.com/imask?_v=20240308023408"></script>
+	<script src="js/app.min.js?_v=20240308023408"></script>
 </body>
 
 </html>

@@ -1243,6 +1243,41 @@ html.pc .cards__hover:hover .cards__plate {
           transform: rotate(45deg);
 }
 
+.full-review {
+  padding: 1.25rem;
+  color: #192d22;
+}
+
+.full-review .reviews__btn {
+  width: auto;
+  height: auto;
+  position: static;
+}
+
+.full-review .reviews__btn::after,
+.full-review .reviews__btn::before {
+  display: none;
+}
+
+.full-review .reviews__text {
+  -webkit-line-clamp: 21;
+  -webkit-box-orient: vertical;
+  line-clamp: 21;
+}
+
+.full-review__content {
+  background-color: transparent;
+  padding: 0;
+  max-width: 600px;
+}
+
+.full-review .reviews__slide-body {
+  width: 100%;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
 @supports (padding-top: clamp( 1.25rem , 0.4078947368rem  +  4.2105263158vw , 3.75rem )) {
   .withus {
     padding-top: clamp( 1.25rem , 0.4078947368rem  +  4.2105263158vw , 3.75rem );
