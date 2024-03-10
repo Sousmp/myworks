@@ -659,6 +659,23 @@ html.lock .menu__body {
   opacity: 1;
 }
 
+html._currency-mob .header .filter__currency-box {
+  display: block;
+}
+
+html._currency-mob .header .filter__currency-box .filter__currency-select {
+  min-width: 41px;
+  min-height: 41px;
+}
+
+html._currency-mob .header .filter__currency-box .select__option {
+  font-size: 0.875rem;
+}
+
+html._currency-mob .menu__icon {
+  display: none !important;
+}
+
 ._spoller-init button {
   display: inline-block;
 }
@@ -3436,14 +3453,16 @@ html.pc .form-review__submit._active:hover {
   }
 }
 
-@media (max-width: 1650px) {
-  .anim .anim__object {
-    max-width: 700px;
-  }
-
+@media (max-width: 1680px) {
   html._scroll .anim__object {
     font-size: 3.125rem;
     max-width: 500px;
+  }
+}
+
+@media (max-width: 1650px) {
+  .anim .anim__object {
+    max-width: 700px;
   }
 
   .text2 {
@@ -3485,7 +3504,7 @@ html.pc .form-review__submit._active:hover {
   }
 
   html._scroll .anim__object {
-    font-size: 2.5rem;
+    font-size: 2.375rem;
     max-width: 400px;
   }
 
@@ -3548,6 +3567,10 @@ html.pc .form-review__submit._active:hover {
   .logo__text {
     font-size: 1rem;
   }
+
+  ._phone {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -3562,10 +3585,6 @@ html.pc .form-review__submit._active:hover {
       font-size: calc(0.8125rem + 0.4375 * (100vw - 20rem) / 59.375);
     }
 }
-
-  ._phone {
-    font-size: 1rem;
-  }
 }
 
 @media (max-width: 991px) {
@@ -3664,7 +3683,7 @@ html.pc .form-review__submit._active:hover {
     -webkit-transform: translateY(52.5px);
         -ms-transform: translateY(52.5px);
             transform: translateY(52.5px);
-    font-size: 2.1875rem;
+    font-size: 2rem;
     max-width: 340px;
   }
 
@@ -4074,7 +4093,7 @@ html.pc .form-review__submit._active:hover {
     -webkit-transform: translateY(52.5px);
         -ms-transform: translateY(52.5px);
             transform: translateY(52.5px);
-    font-size: 1.75rem;
+    font-size: 1.375rem;
     max-width: 260px;
   }
 
@@ -4379,19 +4398,6 @@ html.pc .form-review__submit._active:hover {
     font-size: 14px;
   }
 
-  html._currency-mob .header .filter__currency-box {
-    display: block;
-  }
-
-  html._currency-mob .header .filter__currency-box .filter__currency-select {
-    min-width: 41px;
-    min-height: 41px;
-  }
-
-  html._currency-mob .header .filter__currency-box .select__option {
-    font-size: 0.875rem;
-  }
-
   html._anim .service__title._line-break img {
     width: 2.5rem;
   }
@@ -4419,11 +4425,6 @@ html.pc .form-review__submit._active:hover {
         -ms-transform: translateY(42.5px);
             transform: translateY(42.5px);
     max-width: 190px;
-  }
-
-  html._scroll .anim__object._min {
-    font-size: 0.875rem;
-    max-width: 140px;
   }
 
   html._scroll .cards__title img {
@@ -4937,6 +4938,11 @@ html.pc .form-review__submit._active:hover {
 }
 
 @media (max-width: 450px) {
+  html._scroll .anim__object._min {
+    font-size: 0.875rem;
+    max-width: 140px;
+  }
+
   .estate__container {
     padding: 0;
   }
