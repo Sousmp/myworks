@@ -1237,39 +1237,6 @@
         }
     }
     modules_flsModules.select = new SelectConstructor({});
-    document.addEventListener("selectCallback", (function(e) {
-        const currentSelect = e.detail.select;
-        if (currentSelect.value === "residential") {
-            document.querySelector(".filter__bedroom-box").hidden = false;
-            document.querySelector(".filter__room-box").hidden = true;
-            document.querySelector(".filter__comunications-box").hidden = true;
-            document.querySelector(".filter__residential-type-box").hidden = false;
-            document.querySelector(".filter__commercial-type-box").hidden = true;
-            document.querySelector(".filter__plot-type-box").hidden = true;
-            document.querySelector(".filter__repair-box").hidden = false;
-            document.querySelector(".filter__buildings-box").hidden = true;
-        }
-        if (currentSelect.value === "commercial") {
-            document.querySelector(".filter__bedroom-box").hidden = true;
-            document.querySelector(".filter__room-box").hidden = false;
-            document.querySelector(".filter__comunications-box").hidden = true;
-            document.querySelector(".filter__residential-type-box").hidden = true;
-            document.querySelector(".filter__commercial-type-box").hidden = false;
-            document.querySelector(".filter__plot-type-box").hidden = true;
-            document.querySelector(".filter__repair-box").hidden = false;
-            document.querySelector(".filter__buildings-box").hidden = true;
-        }
-        if (currentSelect.value === "plot") {
-            document.querySelector(".filter__bedroom-box").hidden = true;
-            document.querySelector(".filter__room-box").hidden = true;
-            document.querySelector(".filter__comunications-box").hidden = false;
-            document.querySelector(".filter__residential-type-box").hidden = true;
-            document.querySelector(".filter__commercial-type-box").hidden = true;
-            document.querySelector(".filter__plot-type-box").hidden = false;
-            document.querySelector(".filter__repair-box").hidden = true;
-            document.querySelector(".filter__buildings-box").hidden = false;
-        }
-    }));
     var PipsMode;
     (function(PipsMode) {
         PipsMode["Range"] = "range";
@@ -6696,7 +6663,7 @@
         const observer = new MutationObserver((function(mutationsList, observer) {
             for (let mutation of mutationsList) if (mutation.type === "attributes" && mutation.attributeName === "class") {
                 const isOpen = selectFilterCurrency.classList.contains("_select-open");
-                if (isOpen) titleSpan.classList.add("_hidden"); else titleSpan.classList.remove("_hidden");
+                if (isOpen) titleSpan.classList.add("_min"); else titleSpan.classList.remove("_min");
             }
         }));
         const config = {
@@ -6723,53 +6690,41 @@
         }));
         window.addEventListener("resize", (function() {
             if (window.innerWidth < 991) {
-                var square = document.querySelector(".map__map iframe");
-                if (square) {
-                    var width = square.offsetWidth;
-                    square.style.height = width + "px";
+                var map = document.querySelector(".map__map iframe");
+                if (map) {
+                    var width = map.offsetWidth;
+                    map.style.height = width + "px";
                 }
             }
         }));
         window.addEventListener("load", (function() {
             if (window.innerWidth < 991) {
-                var square = document.querySelector(".map__map iframe");
-                if (square) {
-                    var width = square.offsetWidth;
-                    square.style.height = width + "px";
+                var map = document.querySelector(".map__map iframe");
+                if (map) {
+                    var width = map.offsetWidth;
+                    map.style.height = width + "px";
                 }
             }
-        }));
-        var parentElement = document.querySelector(".select_filter__currency");
-        if (parentElement) parentElement.addEventListener("change", (function(event) {
-            var target = event.target;
-            if (target && target.matches(".filter__currency")) {
-                var selectedOption = target.options[target.selectedIndex];
-                console.log(selectedOption.value);
-            }
-        }));
-        document.addEventListener("DOMContentLoaded", (function() {
-            var currencySelect = document.querySelector(".filter__currency");
-            currencySelect.addEventListener("change", (function() {
-                var selectedOption = currencySelect.options[currencySelect.selectedIndex];
-                currencyShow.textContent = selectedOption.value;
-            }));
         }));
     }));
     document.addEventListener("DOMContentLoaded", (function() {
         if (document.documentElement.classList.contains("_anim")) window.addEventListener("scroll", (function() {
             const scrollPosition = window.scrollY;
             const logo = document.querySelector(".header__logo");
-            this.document.querySelector(".anim");
+            let translateY = 0;
+            let scrollThreshold = 0;
             if (window.innerWidth < 769) {
-                if (scrollPosition > 0 && window.scrollY < 130) logo.style.transform = `translateY(-${window.scrollY}px)`; else if (window.scrollY > 129) logo.style.transform = `translateY(-120px)`; else logo.style.transform = `translateY(0px)`;
-                if (scrollPosition > 20) document.documentElement.classList.add("_scroll"); else document.documentElement.classList.remove("_scroll");
+                translateY = Math.min(scrollPosition, 130);
+                scrollThreshold = 20;
             } else if (window.innerWidth > 991) {
-                if (scrollPosition > 50) logo.style.transform = `translateY(-${window.scrollY - 50}px)`; else if (window.scrollY > 200) logo.style.transform = `translateY(-200px)`; else logo.style.transform = `translateY(0px)`;
-                if (scrollPosition > 140) document.documentElement.classList.add("_scroll"); else document.documentElement.classList.remove("_scroll");
+                translateY = Math.min(scrollPosition - 50, 150);
+                scrollThreshold = 140;
             } else {
-                if (scrollPosition > 40) logo.style.transform = `translateY(-${window.scrollY - 40}px)`; else if (window.scrollY > 120) logo.style.transform = `translateY(-120px)`; else logo.style.transform = `translateY(0px)`;
-                if (scrollPosition > 100) document.documentElement.classList.add("_scroll"); else document.documentElement.classList.remove("_scroll");
+                translateY = Math.min(scrollPosition - 40, 80);
+                scrollThreshold = 100;
             }
+            logo.style.transform = `translateY(-${translateY}px)`;
+            document.documentElement.classList.toggle("_scroll", scrollPosition > scrollThreshold);
         }));
     }));
     document.addEventListener("DOMContentLoaded", (function() {
@@ -6872,6 +6827,52 @@
                 return false;
             }
         }));
+    }));
+    document.addEventListener("selectCallback", (function(e) {
+        const currentSelect = e.detail.select;
+        const actions = {
+            residential: {
+                show: [ ".filter__residential-type-box", ".filter__repair-box" ],
+                hide: [ ".filter__commercial-type-box", ".filter__plot-type-box", ".filter__bedroom-box", ".filter__room-box", ".filter__comunications-box", ".filter__buildings-box" ]
+            },
+            commercial: {
+                show: [ ".filter__commercial-type-box", ".filter__room-box", ".filter__repair-box" ],
+                hide: [ ".filter__residential-type-box", ".filter__plot-type-box", ".filter__bedroom-box", ".filter__comunications-box", ".filter__buildings-box" ]
+            },
+            plot: {
+                show: [ ".filter__plot-type-box", ".filter__buildings-box", ".filter__comunications-box" ],
+                hide: [ ".filter__residential-type-box", ".filter__commercial-type-box", ".filter__bedroom-box", ".filter__room-box", ".filter__repair-box" ]
+            }
+        };
+        if (currentSelect.value in actions) {
+            const action = actions[currentSelect.value];
+            action.show.forEach((selector => {
+                document.querySelector(selector).hidden = false;
+            }));
+            action.hide.forEach((selector => {
+                document.querySelector(selector).hidden = true;
+            }));
+        }
+    }));
+    document.addEventListener("selectCallback", (function(e) {
+        const currentSelect = e.detail.select;
+        const currency = document.querySelector(".info__currency");
+        if (currentSelect.classList.contains("filter__currency") && currency) switch (currentSelect.value) {
+          case "usd":
+            currency.innerHTML = "дол.";
+            break;
+
+          case "eur":
+            currency.innerHTML = "евро";
+            break;
+
+          case "rub":
+            currency.innerHTML = "руб.";
+            break;
+
+          default:
+            break;
+        }
     }));
     window["FLS"] = false;
     isWebp();
