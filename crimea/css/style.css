@@ -4421,7 +4421,7 @@ html.pc .form-review__submit._active:hover {
     max-width: 190px;
   }
 
-  html._scroll .anim__object._hidden {
+  html._scroll .anim__object._min {
     font-size: 0.875rem;
     max-width: 140px;
   }
@@ -4993,7 +4993,7 @@ html.pc .form-review__submit._active:hover {
     max-width: 170px;
   }
 
-  html._scroll .anim__object._hidden {
+  html._scroll .anim__object._min {
     font-size: 0.6875rem;
     max-width: 110px;
   }
@@ -5003,7 +5003,7 @@ html.pc .form-review__submit._active:hover {
   }
 
   .info__value {
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
   }
 
   .info__img img {
@@ -5016,6 +5016,10 @@ html.pc .form-review__submit._active:hover {
 
   .info__item {
     gap: 0.5rem;
+  }
+
+  .info__text {
+    font-size: 0.8125rem;
   }
 
   .estate-info__img img {
