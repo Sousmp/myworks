@@ -15,7 +15,7 @@
 	<meta name="msapplication-config" content="https://sousmp.github.io/myworks/crimea/browserconfig.xml">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240307151433">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240310163559">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -32,8 +32,8 @@
 						<p class="header__logo-text  logo__text">Департамент недвижимости <br>Крыма</p>
 					</a>
 					<a href="service.html" class="header__back">
-						<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#DFC58A" />
+						<svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="0.5" y="0.5" width="40" height="40" rx="19.5" stroke="#DFC58A" />
 							<path d="M22.5 13.75L16.25 20L22.5 26.25" stroke="#DFC58A" stroke-linecap="round" stroke-linejoin="round" />
 						</svg>
 					</a>
@@ -58,6 +58,15 @@
 							<line x1="13" y1="26.5" x2="41" y2="26.5" stroke="#DFC58A" />
 						</svg>
 					</button>
+					<div class="filter__currency-box">
+						<div class="filter__currency-select">
+							<select data-speed="400" data-vertical name="" id="" class="filter__currency">
+								<option value="rub">₽</option>
+								<option value="usd">$</option>
+								<option value="eur">€</option>
+							</select>
+						</div>
+					</div>
 				</div>
 				<!-- </div> -->
 			</div>
@@ -364,14 +373,13 @@
 			</div>
 		</div>
 
-
 		<div id="menu" aria-hidden="true" class="popup menu">
 			<div class="popup__wrapper menu__wrapper">
 				<div class="popup__content menu">
 					<nav class="menu__nav">
 						<ul class="menu__links">
 							<li>
-								<a href="#" class="menu__link">
+								<a href="estate.html" class="menu__link">
 									<img src="img/cards/icons/1.svg" alt="Image">Продажа недвижимости
 								</a>
 							</li>
@@ -441,7 +449,7 @@
 						</div>
 						<div class="form-review__textarea-body">
 							<p class="form-review__text">Минимум 20 слов</p>
-							<textarea class="form-review__textarea" name="" placeholder="Текст отзыва..." id="" cols="30" rows="10"></textarea>
+							<textarea class="form-review__textarea" name="" maxlength="750" placeholder="Текст отзыва..." cols="30" rows="10"></textarea>
 						</div>
 						<p class="form-review__policy">Нажимая на кнопку «Получить консультацию», Вы соглашаетесь
 							с условиями <a href="#">политики конфиденциальности</a>
@@ -453,8 +461,8 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://unpkg.com/imask?_v=20240307151433"></script>
-	<script src="js/app.min.js?_v=20240307151433"></script>
+	<script src="https://unpkg.com/imask?_v=20240310163559"></script>
+	<script src="js/app.min.js?_v=20240310163559"></script>
 </body>
 
 </html>
