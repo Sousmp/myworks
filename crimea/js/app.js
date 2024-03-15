@@ -1098,11 +1098,13 @@
                         selectInput.value = "";
                     } else {
                         _slideUp(selectOptions, originalSelect.dataset.speed);
-                        selectInput.value = "";
                         const activeOption = selectOptions.querySelector(`.${this.selectClasses.classSelectOption}[aria-selected="true"]`);
-                        selectOptions.querySelectorAll(`.${this.selectClasses.classSelectOption}`).forEach((option => {
-                            if (option !== activeOption) option.removeAttribute("hidden");
-                        }));
+                        if (originalSelect.hasAttribute("data-search")) {
+                            selectInput.value = "";
+                            selectOptions.querySelectorAll(`.${this.selectClasses.classSelectOption}`).forEach((option => {
+                                if (option !== activeOption) option.removeAttribute("hidden");
+                            }));
+                        }
                     }
                 }
             }

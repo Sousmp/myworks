@@ -3000,8 +3000,8 @@ html.pc .filter .select__title:hover .select__content {
 .filter__select .select__options {
   color: #dfc58a;
   top: 29px;
-  gap: 0.625rem;
-  padding: 0 20px 15px 20px;
+  gap: 1rem;
+  padding: 6px 20px 15px 20px;
   border-radius: 0 0 4px 4px;
   min-width: 100%;
   left: 0;
@@ -3036,6 +3036,10 @@ html.pc .filter .select__title:hover .select__content {
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
   top: 22px;
+}
+
+.filter__select .select._select-open .select__body {
+  padding: 0.5rem 0;
 }
 
 .simplebar-vertical {
@@ -5310,7 +5314,8 @@ html.pc .form-review__submit._active:hover {
   }
 
   .filter__select .select__options {
-    gap: 0.3125rem;
+    padding-top: 2px;
+    gap: 0.4375rem;
   }
 
   .filter__form {
