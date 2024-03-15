@@ -932,6 +932,28 @@ html._anim .cards {
   padding-top: 80px;
 }
 
+html._anim .header__second .header__back {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html._anim .header__second .header__back svg {
+  width: 54px;
+  height: 54px;
+}
+
+html._anim .header__second .menu__icon {
+  display: none;
+}
+
+html._anim .header__second .logo {
+  display: none;
+}
+
 html._anim .cards__title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4155,6 +4177,11 @@ html.pc .form-review__submit._active:hover {
     padding-top: 110px;
   }
 
+  html._anim .header__back svg {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
   html._scroll .anim__title {
     -webkit-transform: translateY(52.5px);
         -ms-transform: translateY(52.5px);
@@ -4929,21 +4956,9 @@ html.pc .form-review__submit._active:hover {
     width: 2.5rem;
   }
 
-  html._anim .header__second .header__back {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
-  html._anim .header__second .menu__icon {
-    display: none;
-  }
-
-  html._anim .header__second .logo {
-    display: none;
+  html._anim .header__back svg {
+    width: 41px !important;
+    height: 41px !important;
   }
 
   html._scroll .anim__object {
