@@ -1051,10 +1051,11 @@
                     }));
                     if (selectOptions.hidden === true) _this.selectAction(selectItem);
                 }));
-                selectInput.addEventListener("blur", (function() {
-                    this.value = "";
-                    selectOptionsItems.forEach((option => {
-                        option.hidden = false;
+                selectOptionsItems.forEach((selectOptionsItem => {
+                    selectOptionsItem.addEventListener("click", (function() {
+                        selectOptionsItems.forEach((option => {
+                            option.hidden = false;
+                        }));
                     }));
                 }));
             }
@@ -1089,9 +1090,20 @@
             selectСlose(selectItem) {
                 const originalSelect = this.getSelectElement(selectItem).originalSelect;
                 const selectOptions = this.getSelectElement(selectItem, this.selectClasses.classSelectOptions).selectElement;
+                const selectInput = this.getSelectElement(selectItem, this.selectClasses.classSelectInput).selectElement;
                 if (!selectOptions.classList.contains("_slide")) {
                     selectItem.classList.remove(this.selectClasses.classSelectOpen);
-                    if (originalSelect.hasAttribute("data-vertical")) _slideLeft(selectOptions, originalSelect.dataset.speed); else _slideUp(selectOptions, originalSelect.dataset.speed);
+                    if (originalSelect.hasAttribute("data-vertical")) {
+                        _slideLeft(selectOptions, originalSelect.dataset.speed);
+                        selectInput.value = "";
+                    } else {
+                        _slideUp(selectOptions, originalSelect.dataset.speed);
+                        selectInput.value = "";
+                        const activeOption = selectOptions.querySelector(`.${this.selectClasses.classSelectOption}[aria-selected="true"]`);
+                        selectOptions.querySelectorAll(`.${this.selectClasses.classSelectOption}`).forEach((option => {
+                            if (option !== activeOption) option.removeAttribute("hidden");
+                        }));
+                    }
                 }
             }
             selectAction(selectItem) {
