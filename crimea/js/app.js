@@ -7722,6 +7722,13 @@
                 const reviewsContainer = document.querySelector(".reviews__container");
                 if (!reviewsZero.hasAttribute("hidden")) reviewsContainer.classList.add("_no-review");
             }));
+            const selectInput = document.querySelector(".select__input");
+            if (selectInput) selectInput.addEventListener("focusin", (function() {
+                if (!selectInput.classList.contains("_empty") || selectInput.value == "") {
+                    selectInput.placeholder = "Введите город";
+                    selectInput.classList.add("_empty");
+                } else selectInput.classList.remove("_empty");
+            }));
         }));
         window.addEventListener("resize", (function() {
             const screenWidth = window.innerWidth;
@@ -7733,14 +7740,6 @@
                 slider.style.height = `${height}px`;
             })); else sliders.forEach((slider => {
                 slider.style.height = "auto";
-            }));
-            const selectInput = document.querySelector(".select__input");
-            selectInput.addEventListener("focusin", (function() {
-                console.log(1);
-                if (!selectInput.classList.contains("_empty") || selectInput.value == "") {
-                    selectInput.placeholder = "Введите город";
-                    selectInput.classList.add("_empty");
-                } else selectInput.classList.remove("_empty");
             }));
         }));
         window.dispatchEvent(new Event("resize"));
