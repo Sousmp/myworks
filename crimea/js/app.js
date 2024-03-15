@@ -1051,6 +1051,12 @@
                     }));
                     if (selectOptions.hidden === true) _this.selectAction(selectItem);
                 }));
+                selectInput.addEventListener("blur", (function() {
+                    this.value = "";
+                    selectOptionsItems.forEach((option => {
+                        option.hidden = false;
+                    }));
+                }));
             }
             selectsActions(e) {
                 const targetElement = e.target;
@@ -1244,7 +1250,6 @@
                 }
             }
             searchActions(selectItem) {
-                this.getSelectElement(selectItem).originalSelect;
                 const selectInput = this.getSelectElement(selectItem, this.selectClasses.classSelectInput).selectElement;
                 const selectOptions = this.getSelectElement(selectItem, this.selectClasses.classSelectOptions).selectElement;
                 const selectOptionsItems = selectOptions.querySelectorAll(`.${this.selectClasses.classSelectOption}`);
@@ -1254,6 +1259,13 @@
                         if (selectOptionsItem.textContent.toUpperCase().indexOf(selectInput.value.toUpperCase()) >= 0) selectOptionsItem.hidden = false; else selectOptionsItem.hidden = true;
                     }));
                     selectOptions.hidden === true ? _this.selectAction(selectItem) : null;
+                }));
+                selectOptionsItems.forEach((selectOptionsItem => {
+                    selectOptionsItem.addEventListener("click", (function() {
+                        selectOptionsItems.forEach((option => {
+                            option.hidden = false;
+                        }));
+                    }));
                 }));
             }
             selectCallback(selectItem, originalSelect) {
@@ -7707,6 +7719,14 @@
                 slider.style.height = `${height}px`;
             })); else sliders.forEach((slider => {
                 slider.style.height = "auto";
+            }));
+            const selectInput = document.querySelector(".select__input");
+            selectInput.addEventListener("focusin", (function() {
+                console.log(1);
+                if (!selectInput.classList.contains("_empty") || selectInput.value == "") {
+                    selectInput.placeholder = "Введите город";
+                    selectInput.classList.add("_empty");
+                } else selectInput.classList.remove("_empty");
             }));
         }));
         window.dispatchEvent(new Event("resize"));

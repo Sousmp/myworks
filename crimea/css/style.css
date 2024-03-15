@@ -2759,10 +2759,10 @@ html.pc .filter .select__title:hover .select__content {
 .filter__cities-box .select__input {
   width: 100%;
   background-color: transparent;
-  height: 1.875rem;
+  height: 2.5rem;
   font-weight: 700;
   color: #dfc58a;
-  padding-left: 5px;
+  padding: 10px 30px 10px 5px;
 }
 
 .filter__cities-box .select__input::-webkit-input-placeholder {
@@ -2794,6 +2794,31 @@ html.pc .filter .select__title:hover .select__content {
   outline: none;
 }
 
+.filter__cities-box .select__input._empty::-webkit-input-placeholder {
+  color: #a57540;
+  font-weight: 500;
+}
+
+.filter__cities-box .select__input._empty::-moz-placeholder {
+  color: #a57540;
+  font-weight: 500;
+}
+
+.filter__cities-box .select__input._empty:-ms-input-placeholder {
+  color: #a57540;
+  font-weight: 500;
+}
+
+.filter__cities-box .select__input._empty::-ms-input-placeholder {
+  color: #a57540;
+  font-weight: 500;
+}
+
+.filter__cities-box .select__input._empty::placeholder {
+  color: #a57540;
+  font-weight: 500;
+}
+
 .filter__cities-box .select__options {
   color: #000;
   top: 29px;
@@ -2801,7 +2826,7 @@ html.pc .filter .select__title:hover .select__content {
   min-width: 100%;
   left: 0;
   border-top: 1px solid #a57540;
-  padding: 15px 20px 20px 20px;
+  padding: 15px 20px 20px 25px;
 }
 
 .filter__cities-box .select__scroll {
