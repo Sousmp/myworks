@@ -597,10 +597,12 @@ html.pc ._phone a:hover {
   width: 100%;
   top: 0rem;
   padding: 2.5rem 0;
+  height: 155px;
   background: rgba(17, 32, 0, 0.9);
 }
 
 .header__container {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5294,7 +5296,7 @@ html.pc .form-review__submit._active:hover {
 
   .filter__cities-box .select__value::after {
     top: 12px;
-    right: 0.75rem;
+    right: 0.9375rem;
     width: 0.625rem;
     height: 0.625rem;
   }
@@ -5749,6 +5751,7 @@ html.pc .form-review__submit._active:hover {
 
 @media (max-width: 61.9375rem) {
   .header {
+    height: 105px;
     padding: 1.25rem 0;
   }
 
