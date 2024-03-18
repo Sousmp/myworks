@@ -5542,6 +5542,29 @@ html.pc .form-review__submit._active:hover {
   .map__container {
     padding: 0 !important;
   }
+
+  .map__container._showmore-active .map__map iframe {
+    opacity: 1;
+  }
+
+  .map__container._showmore-active .map__map {
+    margin-bottom: 30px;
+  }
+
+  .map__map iframe {
+    margin: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease 0s;
+    transition: opacity 0.5s ease 0s;
+    position: absolute;
+    z-index: 2;
+    margin-top: 30px;
+  }
+
+  .map__map {
+    width: 100%;
+    height: 100vw;
+  }
 }
 
 @media (max-width: 425px) {
@@ -5648,6 +5671,11 @@ html.pc .form-review__submit._active:hover {
 
   .propose__title {
     font-size: 1.25rem;
+  }
+
+  .map__map iframe {
+    margin-top: 3.75rem;
+    height: 320px;
   }
 
   .footer__logo-text {
