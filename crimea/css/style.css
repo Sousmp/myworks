@@ -4485,7 +4485,7 @@ html.pc .form-review__submit._active:hover {
   }
 
   .filter__select .select__options {
-    padding: 0 0.9375rem 0.625rem 0.9375rem;
+    padding: 0.5rem 0.9375rem 0.625rem 0.9375rem;
   }
 
   .filter__select .select._select-open .select__title::after {
@@ -4547,6 +4547,8 @@ html.pc .form-review__submit._active:hover {
 
   .map__map iframe {
     margin-top: 3.75rem;
+    height: 100vw;
+    /* Устанавливаем высоту равной ширине окна браузера */
   }
 
   .footer__icon {
