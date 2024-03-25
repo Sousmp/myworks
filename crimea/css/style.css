@@ -692,8 +692,8 @@ html.lang .filter__lang-box {
 }
 
 html.lang .header__request p {
-  -webkit-transition: 0.4s ease 0s;
-  transition: 0.4s ease 0s;
+  -webkit-transition: 0.5s ease 0s;
+  transition: 0.5s ease 0s;
 }
 
 html._currency-mob .header .filter__currency-box {
@@ -850,16 +850,16 @@ html.pc .menu__link:hover::after {
 }
 
 .anim__title {
-  -webkit-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
   -webkit-transform: translateY(135px);
       -ms-transform: translateY(135px);
           transform: translateY(135px);
 }
 
 .anim .anim__object {
-  -webkit-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
   -webkit-transform: translateY(135px);
       -ms-transform: translateY(135px);
           transform: translateY(135px);
@@ -1655,8 +1655,8 @@ html.pc .form__policy a:hover {
 }
 
 .realtor__img {
-  width: 80px;
-  height: 80px;
+  width: 7.5rem;
+  height: 7.5rem;
   border-radius: 50%;
 }
 
@@ -1670,18 +1670,19 @@ html.pc .form__policy a:hover {
 }
 
 .realtor__name {
+  font-weight: 600;
   padding-bottom: 10px;
 }
 
-@supports ( font-size: clamp( 0.75rem , 0.4973684211rem  +  1.2631578947vw , 1.5rem )) {
+@supports ( font-size: clamp( 0.75rem , 0.5815789474rem  +  0.8421052632vw , 1.25rem )) {
   .realtor__name {
-    font-size: clamp( 0.75rem , 0.4973684211rem  +  1.2631578947vw , 1.5rem );
+    font-size: clamp( 0.75rem , 0.5815789474rem  +  0.8421052632vw , 1.25rem );
   }
 }
 
-@supports not ( font-size: clamp( 0.75rem , 0.4973684211rem  +  1.2631578947vw , 1.5rem )) {
+@supports not ( font-size: clamp( 0.75rem , 0.5815789474rem  +  0.8421052632vw , 1.25rem )) {
   .realtor__name {
-    font-size: calc(0.75rem + 0.75 * (100vw - 20rem) / 59.375);
+    font-size: calc(0.75rem + 0.5 * (100vw - 20rem) / 59.375);
   }
 }
 
@@ -1701,25 +1702,26 @@ html.pc .form__policy a:hover {
   }
 }
 
-.realtor__title {
-  padding-top: 30px;
-}
-
 .realtor__number {
+  font-weight: 700;
   white-space: nowrap;
   color: #f7f3e3 !important;
 }
 
-@supports (font-size: clamp( 1.875rem , 1.3486842105rem  +  2.6315789474vw , 3.4375rem )) {
+@supports (font-size: clamp( 1.75rem , 1.1815789474rem  +  2.8421052632vw , 3.4375rem )) {
   .realtor__number {
-    font-size: clamp( 1.875rem , 1.3486842105rem  +  2.6315789474vw , 3.4375rem );
+    font-size: clamp( 1.75rem , 1.1815789474rem  +  2.8421052632vw , 3.4375rem );
   }
 }
 
-@supports not (font-size: clamp( 1.875rem , 1.3486842105rem  +  2.6315789474vw , 3.4375rem )) {
+@supports not (font-size: clamp( 1.75rem , 1.1815789474rem  +  2.8421052632vw , 3.4375rem )) {
   .realtor__number {
-    font-size: calc(1.875rem + 1.5625 * (100vw - 20rem) / 59.375);
+    font-size: calc(1.75rem + 1.6875 * (100vw - 20rem) / 59.375);
   }
+}
+
+.realtor .form__title {
+  padding-right: 0;
 }
 
 .info {
@@ -2522,19 +2524,6 @@ html.pc .photos__arrow:hover {
   border-radius: 30px;
 }
 
-.estate__hover .estate__img img {
-  position: relative;
-  z-index: 0;
-  -webkit-transition: 2s ease 0s;
-  transition: 2s ease 0s;
-}
-
-.estate__hover._active .estate__img img {
-  -webkit-transform: scale(1.15);
-      -ms-transform: scale(1.15);
-          transform: scale(1.15);
-}
-
 .estate__plate {
   background-color: rgba(165, 117, 64, 0.8);
   width: 100%;
@@ -2549,6 +2538,19 @@ html.pc .photos__arrow:hover {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.estate__img._anim-items img {
+  position: relative;
+  z-index: 0;
+  -webkit-transition: 2s ease 0s;
+  transition: 2s ease 0s;
+}
+
+.estate__img._active img {
+  -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 .estate__update {
@@ -4398,7 +4400,6 @@ html.pc .form-review__submit._active:hover {
   .realtor__number {
     display: block;
     padding-top: 15px;
-    color: #dfc58a !important;
   }
 
   .info {
@@ -5219,10 +5220,10 @@ html.pc .form-review__submit._active:hover {
 
   .realtor__img {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 40px;
-            flex: 0 0 40px;
-    width: 40px;
-    height: 40px;
+        -ms-flex: 0 0 60px;
+            flex: 0 0 60px;
+    width: 60px;
+    height: 60px;
   }
 
   .realtor__info {
