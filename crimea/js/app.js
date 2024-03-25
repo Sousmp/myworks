@@ -7762,22 +7762,15 @@
         function startAnimation() {
             animItems.forEach((item => {
                 const itemTop = item.getBoundingClientRect().top + window.scrollY;
-                const itemBottom = item.getBoundingClientRect().bottom + window.scrollY;
-                let offsetTop;
-                let offsetBottom;
-                if (window.innerWidth < 991) {
-                    offsetTop = 150;
-                    offsetBottom = 150;
-                } else {
-                    offsetTop = 300;
-                    offsetBottom = 300;
-                }
-                if (itemTop - headerHeight <= window.scrollY + windowHeight - offsetTop && itemBottom >= window.scrollY + offsetBottom) item.classList.add("_active"); else item.classList.remove("_active");
+                const itemBottom = itemTop + item.clientHeight;
+                const itemHeight = item.clientHeight;
+                const scrollTop = window.scrollY;
+                if (itemTop + itemHeight * .2 - headerHeight >= scrollTop && itemBottom - itemHeight * .2 - headerHeight <= scrollTop + windowHeight) item.classList.add("_active"); else item.classList.remove("_active");
             }));
         }
-        startAnimation();
         window.addEventListener("scroll", startAnimation);
         window.addEventListener("resize", startAnimation);
+        startAnimation();
         document.addEventListener("DOMContentLoaded", (function() {
             if (document.documentElement.classList.contains("_anim")) window.addEventListener("scroll", (function() {
                 const scrollPosition = window.scrollY;
