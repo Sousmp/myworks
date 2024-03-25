@@ -7765,7 +7765,7 @@
                 const itemBottom = itemTop + item.clientHeight;
                 const itemHeight = item.clientHeight;
                 const scrollTop = window.scrollY;
-                if (itemTop + itemHeight * .2 - headerHeight >= scrollTop && itemBottom - itemHeight * .2 - headerHeight <= scrollTop + windowHeight) item.classList.add("_active"); else item.classList.remove("_active");
+                if (itemTop + itemHeight * .2 - headerHeight >= scrollTop && itemBottom - headerHeight <= scrollTop + windowHeight) item.classList.add("_active"); else item.classList.remove("_active");
             }));
         }
         window.addEventListener("scroll", startAnimation);
