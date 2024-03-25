@@ -1724,6 +1724,10 @@ html.pc .form__policy a:hover {
   padding-right: 0;
 }
 
+.realtor .form__icon {
+  top: 3.75rem;
+}
+
 .info {
   padding: 3.75rem 0;
 }
@@ -5232,6 +5236,10 @@ html.pc .form-review__submit._active:hover {
 
   .realtor__name {
     padding-bottom: 6px;
+  }
+
+  .realtor .form__icon {
+    top: 1.875rem;
   }
 
   .info {
