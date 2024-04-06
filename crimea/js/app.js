@@ -7705,6 +7705,26 @@
         };
         const da = new DynamicAdapt("max");
         da.init();
+        var BigPlayButton = videojs.getComponent("BigPlayButton");
+        BigPlayButton.prototype.handleClick = function() {
+            if (this.player_.paused()) {
+                this.player_.play();
+                this.setIcon("pause");
+            } else {
+                this.player_.pause();
+                this.setIcon("play");
+            }
+        };
+        if (document.querySelector(".video")) {
+            var player2 = videojs("my-video2");
+            if (player2) {
+                var controlBarOptions = player2.controlBar.options_;
+                controlBarOptions.children = [ "playToggle", "progressControl", "currentTimeDisplay", "durationDisplay", "volumePanel" ];
+                player2.removeChild("ControlBar");
+                player2.addChild("ControlBar", controlBarOptions);
+                player2.trigger("loadstart");
+            } else console.error('Плеер с идентификатором "my-video2" не найден.');
+        }
         document.addEventListener("DOMContentLoaded", (function() {
             const selectFilterCurrency = document.querySelector(".select_filter__currency");
             const titleSpan = document.querySelector(".anim__object._title");
