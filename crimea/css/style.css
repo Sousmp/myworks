@@ -1887,11 +1887,11 @@ html.pc .form__policy a:hover {
 }
 
 .vjs-play-progress .vjs-time-tooltip {
-  background-color: rgba(156, 156, 156, 0.8) !important;
+  background-color: rgba(223, 197, 138, 0.8) !important;
 }
 
 .vjs-mouse-display .vjs-time-tooltip {
-  background-color: rgba(223, 197, 138, 0.8) !important;
+  background-color: rgba(156, 156, 156, 0.8) !important;
 }
 
 .vjs-icon-placeholder:before {
