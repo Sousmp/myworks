@@ -1647,7 +1647,7 @@ html.pc .form__policy a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.25rem;
+  gap: 1.5625rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1663,6 +1663,9 @@ html.pc .form__policy a:hover {
 .realtor__img img {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .realtor__names {
@@ -1790,6 +1793,164 @@ html.pc .form__policy a:hover {
   font-size: 1.25rem;
   line-height: 160%;
   letter-spacing: 0.02em;
+}
+
+.video__container {
+  max-width: 1820px;
+}
+
+.video-js {
+  width: 100%;
+  aspect-ratio: 16/9;
+  height: auto;
+  border-radius: 20px 20px 0 0;
+}
+
+.vjs-tech {
+  border-radius: 20px 20px 0 0;
+}
+
+.vjs-poster img {
+  border-radius: 20px 20px 0 0;
+}
+
+.video-js .vjs-current-time,
+.video-js .vjs-duration {
+  display: block !important;
+  /* Переопределение стилей */
+}
+
+.video-js .vjs-current-time {
+  width: 35px !important;
+  text-align: right !important;
+}
+
+.vjs-user-active.vjs-show-big-pause-button-on-play:not(.vjs-seeking, .vjs-scrubbing, .vjs-error, .vjs-paused) .vjs-big-play-button {
+  display: block;
+}
+
+.vjs-user-active.vjs-show-big-pause-button-on-play:not(.vjs-seeking, .vjs-scrubbing, .vjs-error, .vjs-paused) .vjs-big-play-button .vjs-icon-placeholder:before {
+  content: "\f103";
+}
+
+.vjs-show-big-pause-button-on-play:not(.vjs-seeking, .vjs-scrubbing, .vjs-error, .vjs-paused) .vjs-big-play-button .vjs-icon-placeholder:before {
+  content: "\f103";
+}
+
+.vjs-show-big-pause-button-on-play:not(.vjs-seeking, .vjs-scrubbing, .vjs-error, .vjs-paused) .vjs-big-play-button {
+  display: block !important;
+}
+
+.vjs-has-started.vjs-user-inactive.vjs-show-big-pause-button-on-play:not(.vjs-seeking,
+.vjs-scrubbing,
+.vjs-error,
+.vjs-paused) .vjs-big-play-button {
+  visibility: visible;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: visibility 1s, opacity 1s;
+  transition: visibility 1s, opacity 1s;
+}
+
+.video-js .vjs-current-time:after {
+  content: "/";
+  margin-left: 5px;
+  /* Расстояние между разделителем и текущим временем */
+}
+
+.video-js .vjs-time-control {
+  font-family: Manrope;
+  padding: 0 3px !important;
+}
+
+.video-js .vjs-progress-control .vjs-progress-holder {
+  margin: 0 10px 0 5px !important;
+}
+
+.vjs-play-progress .vjs-slider-bar {
+  color: #dfc58a;
+}
+
+.vjs-play-control .vjs-icon-placeholder {
+  color: #dfc58a;
+  line-height: 100%;
+  font-size: 16px !important;
+  width: 30px !important;
+}
+
+.vjs-mute-control .vjs-icon-placeholder {
+  font-size: 12px !important;
+}
+
+.vjs-time-tooltip {
+  padding: 6px 8px 4px 8px !important;
+}
+
+.vjs-play-progress .vjs-time-tooltip {
+  background-color: rgba(156, 156, 156, 0.8) !important;
+}
+
+.vjs-mouse-display .vjs-time-tooltip {
+  background-color: rgba(223, 197, 138, 0.8) !important;
+}
+
+.vjs-icon-placeholder:before {
+  line-height: 1 !important;
+  top: 49% !important;
+  height: auto !important;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.vjs-time-control span {
+  line-height: 4em !important;
+}
+
+.vjs-volume-horizontal {
+  height: 4em !important;
+}
+
+.vjs-progress-control .vjs-play-progress {
+  color: #dfc58a;
+  background-color: #dfc58a !important;
+}
+
+.vjs-control-bar {
+  padding: 0 5px;
+  height: 40px !important;
+  background-color: rgba(25, 45, 34, 0.8) !important;
+}
+
+.video-js .vjs-volume-bar {
+  margin: 1.85em 0.45em !important;
+}
+
+.video-js .vjs-slider {
+  background-color: #9c9c9c !important;
+}
+
+.video-js .vjs-load-progress {
+  display: none !important;
+}
+
+.vjs-big-play-button {
+  width: 60px !important;
+  height: 60px !important;
+  margin: 0 !important;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  border-radius: 50% !important;
+  border: 0 !important;
+  background-color: rgba(25, 45, 34, 0.8) !important;
+}
+
+.vjs-big-play-button .vjs-icon-placeholder {
+  font-size: 40px;
+}
+
+.vjs-big-play-button .vjs-icon-placeholder::before {
+  color: #dfc58a;
 }
 
 .reviews {
@@ -4904,6 +5065,15 @@ html.pc .form-review__submit._active:hover {
     }
 }
 
+  .vjs-big-play-button {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .vjs-big-play-button .vjs-icon-placeholder {
+    font-size: 30px;
+  }
+
   .photos__number {
     bottom: 30px;
   }
@@ -5325,6 +5495,10 @@ html.pc .form-review__submit._active:hover {
       gap: calc(0.5rem + 0.4375 * (100vw - 22.4375rem) / 18.25);
     }
 }
+
+  .video__container {
+    padding: 0 !important;
+  }
 
   .photos {
     padding-bottom: 1.25rem;
