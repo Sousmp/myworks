@@ -12,11 +12,11 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 	<link rel="manifest" href="site.webmanifest">
 	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css?_v=20240406195944" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css?_v=20240407142905" />
 	<meta name="msapplication-config" content="https://sousmp.github.io/myworks/crimea/browserconfig.xml">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240406195944">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240407142905">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -84,7 +84,7 @@
 				</div>
 			</section>
 			<section class="video">
-				<link href="https://vjs.zencdn.net/8.10.0/video-js.css?_v=20240406195944" rel="stylesheet" />
+				<link href="https://vjs.zencdn.net/8.10.0/video-js.css?_v=20240407142905" rel="stylesheet" />
 				<div class="video__container">
 					<video id="my-video2" class="video-js vjs-show-big-play-button-on-pause vjs-show-big-pause-button-on-play" controls preload="auto" width="640" height="264" poster="img/partner/1.jpg" data-setup='{"textTrackSettings": false}'>
 						<source src="img/crimea.mp4" type="video/mp4" />
@@ -96,36 +96,7 @@
 					</video>
 				</div>
 			</section>
-			<section class="photos">
-				<div class="photos__container">
-					<div class="photos__slider swiper">
-						<div class="photos__navigate">
-							<div class="photos__arrow photos__arrow-left"><span class="_icon-left-arrow"></span></div>
-							<div class="photos__arrow photos__arrow-right"><span class="_icon-right-arrow"></span></div>
-							<div class="photos__number">0/0 Offers</div>
-						</div>
-						<div class="photos__wrapper swiper-wrapper">
-							<div class="photos__slide swiper-slide">
-								<picture><source srcset="img/object/1.webp" type="image/webp"><img width="360" height="240" src="img/object/1.jpg" alt="Image"></picture>
-							</div>
-							<div class="photos__slide swiper-slide">
-								<picture><source srcset="img/object/2.webp" type="image/webp"><img width="360" height="240" src="img/object/2.jpg" alt="Image"></picture>
-							</div>
-							<div class="photos__slide swiper-slide">
-								<picture><source srcset="img/object/3.webp" type="image/webp"><img width="360" height="240" src="img/object/3.jpg" alt="Image"></picture>
-							</div>
-							<div class="photos__slide swiper-slide">
-								<picture><source srcset="img/object/2.webp" type="image/webp"><img width="360" height="240" src="img/object/2.jpg" alt="Image"></picture>
-							</div>
-							<div class="photos__slide swiper-slide">
-								<picture><source srcset="img/object/3.webp" type="image/webp"><img width="360" height="240" src="img/object/3.jpg" alt="Image"></picture>
-							</div>
-						</div>
-					</div>
-					<div class="photos__pagination"></div>
-				</div>
-			</section>
-			<section class="info">
+			<section class="info info__video">
 				<div class="info__container">
 					<div class="info__items">
 						<div class="info__item">
@@ -174,6 +145,40 @@
 							</div>
 						</div>
 					</div>
+
+				</div>
+			</section>
+			<section class="photos photos__video">
+				<div class="photos__container">
+					<div class="photos__slider swiper">
+						<div class="photos__navigate">
+							<div class="photos__arrow photos__arrow-left"><span class="_icon-left-arrow"></span></div>
+							<div class="photos__arrow photos__arrow-right"><span class="_icon-right-arrow"></span></div>
+							<div class="photos__number">0/0 Offers</div>
+						</div>
+						<div class="photos__wrapper swiper-wrapper">
+							<div class="photos__slide swiper-slide">
+								<picture><source srcset="img/object/1.webp" type="image/webp"><img width="360" height="240" src="img/object/1.jpg" alt="Image"></picture>
+							</div>
+							<div class="photos__slide swiper-slide">
+								<picture><source srcset="img/object/2.webp" type="image/webp"><img width="360" height="240" src="img/object/2.jpg" alt="Image"></picture>
+							</div>
+							<div class="photos__slide swiper-slide">
+								<picture><source srcset="img/object/3.webp" type="image/webp"><img width="360" height="240" src="img/object/3.jpg" alt="Image"></picture>
+							</div>
+							<div class="photos__slide swiper-slide">
+								<picture><source srcset="img/object/2.webp" type="image/webp"><img width="360" height="240" src="img/object/2.jpg" alt="Image"></picture>
+							</div>
+							<div class="photos__slide swiper-slide">
+								<picture><source srcset="img/object/3.webp" type="image/webp"><img width="360" height="240" src="img/object/3.jpg" alt="Image"></picture>
+							</div>
+						</div>
+					</div>
+					<div class="photos__pagination"></div>
+				</div>
+			</section>
+			<section class="info info__video-text">
+				<div class="info__container">
 					<p class="info__text">
 						Просторная и уютная квартира в ЖК «Омега». <br> ЖК «Омега», состоящий из 3-x домов, находится на закрытой и охраняемой территории с круглосуточным видеонаблюдением.
 						<br> <br> В каждой квартире удобная планировка, просторные террасы и балконы, толстые стены, качественная отделка. Статус - квартира! Стоимость содержания составляет 40 руб/м².
@@ -197,8 +202,11 @@
 				<div class="form__container">
 					<div class="form__body">
 						<div class="realtor__info">
-							<div class="realtor__img">
-								<picture><source srcset="img/object/realtor.webp" type="image/webp"><img src="img/object/realtor.png" alt="Image"></picture>
+							<div class="realtor__imgs">
+								<picture><source srcset="img/object/realtor.webp" type="image/webp"><img class="realtor__img" src="img/object/realtor.png" alt="Image"></picture>
+								<a href="#" class="realtor__insta">
+									<img src="img/object/instagram.svg" alt="Image">
+								</a>
 							</div>
 							<div class="realtor__names">
 								<h6 class="realtor__name">Александра</h6>
@@ -419,15 +427,15 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://vjs.zencdn.net/8.10.0/video.min.js?_v=20240406195944"></script>
-	<script src="https://unpkg.com/imask?_v=20240406195944"></script>
+	<script src="https://vjs.zencdn.net/8.10.0/video.min.js?_v=20240407142905"></script>
+	<script src="https://unpkg.com/imask?_v=20240407142905"></script>
 
 	<script>
 
 
 	</script>
 
-	<script src="js/app.min.js?_v=20240406195944"></script>
+	<script src="js/app.min.js?_v=20240407142905"></script>
 </body>
 
 </html>
