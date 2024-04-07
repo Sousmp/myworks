@@ -7705,6 +7705,38 @@
         };
         const da = new DynamicAdapt("max");
         da.init();
+        let htmlElement = document.querySelector("html._min-header");
+        function hideHeader() {
+            if (window.scrollY > 155) htmlElement.classList.add("_header-hide");
+        }
+        function showHeader() {
+            htmlElement.classList.remove("_header-hide");
+        }
+        function resetTimer() {
+            clearTimeout(interactionTimer);
+            interactionTimer = setTimeout(hideHeader, 1500);
+            showHeader();
+        }
+        let interactionTimer;
+        function handleScroll() {
+            resetTimer();
+        }
+        function addEventListeners() {
+            document.addEventListener("mousemove", resetTimer);
+            document.addEventListener("keypress", resetTimer);
+            document.addEventListener("wheel", resetTimer);
+            document.addEventListener("keydown", (event => {
+                if (event.key.startsWith("Arrow")) resetTimer();
+            }));
+        }
+        if (htmlElement && window.innerWidth > 991) {
+            window.addEventListener("scroll", handleScroll);
+            window.addEventListener("resize", handleScroll);
+            document.addEventListener("DOMContentLoaded", (() => {
+                handleScroll();
+                addEventListeners();
+            }));
+        }
         if (document.querySelector(".video")) {
             var player2 = videojs("my-video2");
             if (player2) {
@@ -7722,7 +7754,6 @@
                 controlBarOptions.children = [ "playToggle", "progressControl", "currentTimeDisplay", "durationDisplay", "volumePanel" ];
                 player2.removeChild("ControlBar");
                 player2.addChild("ControlBar", controlBarOptions);
-                player2.trigger("loadstart");
             } else console.error('Плеер с идентификатором "my-video2" не найден.');
         }
         document.addEventListener("DOMContentLoaded", (function() {

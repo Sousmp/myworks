@@ -670,6 +670,17 @@ html.pc ._phone a:hover {
   gap: 1.5625rem;
 }
 
+html._min-header .header {
+  -webkit-transition: 0.5s ease 0s;
+  transition: 0.5s ease 0s;
+}
+
+html._header-hide .header {
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
 html.menu-open .menu__body {
   overflow-x: hidden;
   -webkit-transform: translateX(-100%);
@@ -957,6 +968,18 @@ html._anim .cards__title img {
 html._anim .cards__title span {
   -webkit-transition: 0.4s ease 0s;
   transition: 0.4s ease 0s;
+}
+
+html._header-hide .anim__object {
+  -webkit-transform: translateY(-100%) !important;
+      -ms-transform: translateY(-100%) !important;
+          transform: translateY(-100%) !important;
+}
+
+html._header-hide .anim__title {
+  -webkit-transform: translateY(-100%) !important;
+      -ms-transform: translateY(-100%) !important;
+          transform: translateY(-100%) !important;
 }
 
 html._scroll .anim__container {
@@ -1839,7 +1862,7 @@ html.pc .realtor__insta:hover {
 }
 
 .video__container {
-  max-width: 1820px;
+  max-width: 1794px;
 }
 
 .video-js {
