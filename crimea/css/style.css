@@ -1692,6 +1692,34 @@ html.pc .form__policy a:hover {
      object-fit: cover;
 }
 
+.realtor .form__body {
+  padding: 2.5rem 2.5rem 3.75rem 2.5rem;
+}
+
+@supports (padding-top: clamp( 1.875rem , 1.875rem  +  0vw , 1.875rem )) {
+  .realtor .form__subtitle {
+    padding-top: clamp( 1.875rem , 1.875rem  +  0vw , 1.875rem );
+  }
+}
+
+@supports not (padding-top: clamp( 1.875rem , 1.875rem  +  0vw , 1.875rem )) {
+  .realtor .form__subtitle {
+    padding-top: calc(1.875rem + 0 * (100vw - 20rem) / 59.375);
+  }
+}
+
+@supports (padding-bottom: clamp( 1.875rem , 1.6644736842rem  +  1.0526315789vw , 2.5rem )) {
+  .realtor .form__subtitle {
+    padding-bottom: clamp( 1.875rem , 1.6644736842rem  +  1.0526315789vw , 2.5rem );
+  }
+}
+
+@supports not (padding-bottom: clamp( 1.875rem , 1.6644736842rem  +  1.0526315789vw , 2.5rem )) {
+  .realtor .form__subtitle {
+    padding-bottom: calc(1.875rem + 0.625 * (100vw - 20rem) / 59.375);
+  }
+}
+
 .realtor__insta {
   position: absolute;
   width: 2.5rem;
@@ -1862,7 +1890,9 @@ html.pc .realtor__insta:hover {
 }
 
 .video__container {
-  max-width: 1794px;
+  max-width: 1920px;
+  text-align: center;
+  padding: 0 !important;
 }
 
 .video-js {
@@ -5498,12 +5528,20 @@ html.pc .form-review__submit._active:hover {
     font-size: 2.1875rem;
   }
 
+  .realtor .form__body {
+    padding: 1.25rem 1.25rem 1.875rem 1.25rem;
+  }
+
   .realtor__imgs {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 3.75rem;
             flex: 0 0 3.75rem;
     width: 3.75rem;
     height: 3.75rem;
+  }
+
+  .realtor .form__subtitle {
+    padding: 1.25rem 0 0.9375rem;
   }
 
   .realtor__info {
