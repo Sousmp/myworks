@@ -1972,6 +1972,14 @@ html.pc .realtor__insta:hover {
   font-size: 12px !important;
 }
 
+.vjs-fullscreen-control {
+  width: 25px !important;
+}
+
+.vjs-fullscreen-control .vjs-icon-placeholder {
+  font-size: 12px;
+}
+
 .vjs-time-tooltip {
   padding: 6px 8px 4px 8px !important;
 }
@@ -2007,7 +2015,7 @@ html.pc .realtor__insta:hover {
 }
 
 .vjs-control-bar {
-  padding: 0 5px;
+  padding: 0 10px 0 5px;
   height: 40px !important;
   background-color: rgba(25, 45, 34, 0.8) !important;
 }

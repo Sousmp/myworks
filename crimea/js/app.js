@@ -7741,15 +7741,13 @@
         }
         window.onload = function() {
             var photosSlide = document.querySelector(".photos__slide");
-            var videoJS2 = document.querySelector(".vjs-tech");
             var videoJS = document.querySelector(".video-js");
-            var videoJS3 = document.querySelector(".vjs-poster");
             if (videoJS) {
                 function resizeVideo() {
-                    var photosSlideWidth = photosSlide.offsetWidth;
-                    videoJS.style.width = photosSlideWidth + "px";
-                    videoJS2.style.width = photosSlideWidth + "px";
-                    videoJS3.style.width = photosSlideWidth + "px";
+                    if (window.innerWidth > 649) {
+                        var photosSlideWidth = photosSlide.offsetWidth;
+                        videoJS.style.width = photosSlideWidth + "px";
+                    } else videoJS.style.width = "100%";
                 }
                 window.addEventListener("resize", resizeVideo);
                 resizeVideo();
@@ -7769,7 +7767,7 @@
                     }
                 };
                 var controlBarOptions = player2.controlBar.options_;
-                controlBarOptions.children = [ "playToggle", "progressControl", "currentTimeDisplay", "durationDisplay", "volumePanel" ];
+                controlBarOptions.children = [ "playToggle", "progressControl", "currentTimeDisplay", "durationDisplay", "volumePanel", "fullscreenToggle" ];
                 player2.removeChild("ControlBar");
                 player2.addChild("ControlBar", controlBarOptions);
             } else console.error('Плеер с идентификатором "my-video2" не найден.');
