@@ -7744,14 +7744,16 @@
             var videoJS2 = document.querySelector(".vjs-tech");
             var videoJS = document.querySelector(".video-js");
             var videoJS3 = document.querySelector(".vjs-poster");
-            function resizeVideo() {
-                var photosSlideWidth = photosSlide.offsetWidth;
-                videoJS.style.width = photosSlideWidth + "px";
-                videoJS2.style.width = photosSlideWidth + "px";
-                videoJS3.style.width = photosSlideWidth + "px";
+            if (videoJS) {
+                function resizeVideo() {
+                    var photosSlideWidth = photosSlide.offsetWidth;
+                    videoJS.style.width = photosSlideWidth + "px";
+                    videoJS2.style.width = photosSlideWidth + "px";
+                    videoJS3.style.width = photosSlideWidth + "px";
+                }
+                window.addEventListener("resize", resizeVideo);
+                resizeVideo();
             }
-            window.addEventListener("resize", resizeVideo);
-            resizeVideo();
         };
         if (document.querySelector(".video")) {
             var player2 = videojs("my-video2");

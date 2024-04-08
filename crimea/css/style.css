@@ -1696,28 +1696,9 @@ html.pc .form__policy a:hover {
   padding: 2.5rem 2.5rem 3.75rem 2.5rem;
 }
 
-@supports (padding-top: clamp( 1.875rem , 1.875rem  +  0vw , 1.875rem )) {
-  .realtor .form__subtitle {
-    padding-top: clamp( 1.875rem , 1.875rem  +  0vw , 1.875rem );
-  }
-}
-
-@supports not (padding-top: clamp( 1.875rem , 1.875rem  +  0vw , 1.875rem )) {
-  .realtor .form__subtitle {
-    padding-top: calc(1.875rem + 0 * (100vw - 20rem) / 59.375);
-  }
-}
-
-@supports (padding-bottom: clamp( 1.875rem , 1.6644736842rem  +  1.0526315789vw , 2.5rem )) {
-  .realtor .form__subtitle {
-    padding-bottom: clamp( 1.875rem , 1.6644736842rem  +  1.0526315789vw , 2.5rem );
-  }
-}
-
-@supports not (padding-bottom: clamp( 1.875rem , 1.6644736842rem  +  1.0526315789vw , 2.5rem )) {
-  .realtor .form__subtitle {
-    padding-bottom: calc(1.875rem + 0.625 * (100vw - 20rem) / 59.375);
-  }
+.realtor .form__subtitle {
+  padding-top: 1.875rem !important;
+  padding-bottom: 2.5rem !important;
 }
 
 .realtor__insta {
