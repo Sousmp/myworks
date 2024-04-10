@@ -2590,6 +2590,30 @@ html.pc .photos__arrow:hover {
   border-radius: 20px;
 }
 
+@supports (max-height: clamp(15rem, 2.8676470588rem + 53.9215686275vw, 28.75rem)) {
+  .photos .photos__slide {
+    max-height: clamp(15rem, 2.8676470588rem + 53.9215686275vw, 28.75rem);
+  }
+}
+
+@supports not (max-height: clamp(15rem, 2.8676470588rem + 53.9215686275vw, 28.75rem)) {
+  .photos .photos__slide {
+    max-height: calc(15rem + 13.75 * (100vw - 22.5rem) / 25.5);
+  }
+}
+
+@supports (height: clamp(15rem, 2.8676470588rem + 53.9215686275vw, 28.75rem)) {
+  .photos .photos__slider {
+    height: clamp(15rem, 2.8676470588rem + 53.9215686275vw, 28.75rem);
+  }
+}
+
+@supports not (height: clamp(15rem, 2.8676470588rem + 53.9215686275vw, 28.75rem)) {
+  .photos .photos__slider {
+    height: calc(15rem + 13.75 * (100vw - 22.5rem) / 25.5);
+  }
+}
+
 .propose {
   padding-top: 3.75rem;
   padding-bottom: 3.75rem;
@@ -5210,30 +5234,6 @@ html.pc .form-review__submit._active:hover {
     bottom: 30px;
   }
 
-@supports (max-height: clamp( 15rem , 2.8676470588rem  +  53.9215686275vw , 28.75rem )) {
-    .photos__slide {
-      max-height: clamp( 15rem , 2.8676470588rem  +  53.9215686275vw , 28.75rem );
-    }
-}
-
-@supports not (max-height: clamp( 15rem , 2.8676470588rem  +  53.9215686275vw , 28.75rem )) {
-    .photos__slide {
-      max-height: calc(15rem + 13.75 * (100vw - 22.5rem) / 25.5);
-    }
-}
-
-@supports (height: clamp( 15rem , 2.8676470588rem  +  53.9215686275vw , 28.75rem )) {
-    .photos__slider {
-      height: clamp( 15rem , 2.8676470588rem  +  53.9215686275vw , 28.75rem );
-    }
-}
-
-@supports not (height: clamp( 15rem , 2.8676470588rem  +  53.9215686275vw , 28.75rem )) {
-    .photos__slider {
-      height: calc(15rem + 13.75 * (100vw - 22.5rem) / 25.5);
-    }
-}
-
   .error__title {
     max-width: 320px;
   }
@@ -5388,16 +5388,6 @@ html.pc .form-review__submit._active:hover {
 
   .service__reviews {
     font-size: inherit;
-  }
-}
-
-@media (max-width: 768px) and (max-width: 22.5em) {
-  .photos__slide {
-    max-height: inherit;
-  }
-
-  .photos__slider {
-    height: inherit;
   }
 }
 
@@ -7494,16 +7484,6 @@ html.pc .form-review__submit._active:hover {
 
   .user__task {
     font-size: inherit;
-  }
-}
-
-@media (max-width: 768px) and (min-width: 48em) {
-  .photos__slide {
-    max-height: inherit;
-  }
-
-  .photos__slider {
-    height: inherit;
   }
 }
 
