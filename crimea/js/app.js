@@ -6643,9 +6643,8 @@
                 }
             }
         }
-        window.addEventListener("load", (function(e) {
-            initSliders();
-        }));
+        initSliders();
+        document.querySelector(".swiper-slide").style.display = "flex";
         var can_use_dom = __webpack_require__(807);
         function isObject_isObject(value) {
             var type = typeof value;
@@ -7775,16 +7774,18 @@
         document.addEventListener("DOMContentLoaded", (function() {
             const selectFilterCurrency = document.querySelector(".select_filter__currency");
             const titleSpan = document.querySelector(".anim__object._title");
-            const observer = new MutationObserver((function(mutationsList, observer) {
-                for (let mutation of mutationsList) if (mutation.type === "attributes" && mutation.attributeName === "class") {
-                    const isOpen = selectFilterCurrency.classList.contains("_select-open");
-                    if (isOpen) titleSpan.classList.add("_min"); else titleSpan.classList.remove("_min");
-                }
-            }));
-            const config = {
-                attributes: true
-            };
-            observer.observe(selectFilterCurrency, config);
+            if (selectFilterCurrency && titleSpan) {
+                const observer = new MutationObserver((function(mutationsList, observer) {
+                    for (let mutation of mutationsList) if (mutation.type === "attributes" && mutation.attributeName === "class") {
+                        const isOpen = selectFilterCurrency.classList.contains("_select-open");
+                        if (isOpen) titleSpan.classList.add("_min"); else titleSpan.classList.remove("_min");
+                    }
+                }));
+                const config = {
+                    attributes: true
+                };
+                observer.observe(selectFilterCurrency, config);
+            }
             let h1 = document.querySelector(".service__title");
             let text = document.querySelector(".cards__text");
             if (h1) {
