@@ -6643,8 +6643,10 @@
                 }
             }
         }
-        initSliders();
-        document.querySelector(".swiper-slide").style.display = "flex";
+        window.addEventListener("load", (function(e) {
+            initSliders();
+            document.querySelector(".swiper-slide").style.display = "flex";
+        }));
         var can_use_dom = __webpack_require__(807);
         function isObject_isObject(value) {
             var type = typeof value;
