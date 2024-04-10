@@ -2447,19 +2447,18 @@ html.pc .reviews__btn:hover {
 
 .photos__slider {
   width: 100%;
-  height: 100%;
   position: relative;
 }
 
-@supports (max-height: clamp( 28.75rem , 5.300954033rem  +  48.9158716392vw , 64rem )) {
+@supports (height: clamp( 28.75rem , 5.300954033rem  +  48.9158716392vw , 64rem )) {
   .photos__slider {
-    max-height: clamp( 28.75rem , 5.300954033rem  +  48.9158716392vw , 64rem );
+    height: clamp( 28.75rem , 5.300954033rem  +  48.9158716392vw , 64rem );
   }
 }
 
-@supports not (max-height: clamp( 28.75rem , 5.300954033rem  +  48.9158716392vw , 64rem )) {
+@supports not (height: clamp( 28.75rem , 5.300954033rem  +  48.9158716392vw , 64rem )) {
   .photos__slider {
-    max-height: calc(28.75rem + 35.25 * (100vw - 47.9375rem) / 72.0625);
+    height: calc(28.75rem + 35.25 * (100vw - 47.9375rem) / 72.0625);
   }
 }
 
@@ -2560,7 +2559,9 @@ html.pc .photos__arrow:hover {
   width: 100%;
   height: 100%;
   position: relative;
-  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .photos__slide {
@@ -5221,6 +5222,18 @@ html.pc .form-review__submit._active:hover {
     }
 }
 
+@supports (height: clamp( 15rem , 2.8676470588rem  +  53.9215686275vw , 28.75rem )) {
+    .photos__slider {
+      height: clamp( 15rem , 2.8676470588rem  +  53.9215686275vw , 28.75rem );
+    }
+}
+
+@supports not (height: clamp( 15rem , 2.8676470588rem  +  53.9215686275vw , 28.75rem )) {
+    .photos__slider {
+      height: calc(15rem + 13.75 * (100vw - 22.5rem) / 25.5);
+    }
+}
+
   .error__title {
     max-width: 320px;
   }
@@ -5381,6 +5394,10 @@ html.pc .form-review__submit._active:hover {
 @media (max-width: 768px) and (max-width: 22.5em) {
   .photos__slide {
     max-height: inherit;
+  }
+
+  .photos__slider {
+    height: inherit;
   }
 }
 
@@ -6124,6 +6141,10 @@ html.pc .form-review__submit._active:hover {
     max-height: 240px;
   }
 
+  .photos__slider {
+    height: 240px;
+  }
+
   .form-review__title {
     font-size: 2.5rem;
   }
@@ -6692,7 +6713,7 @@ html.pc .form-review__submit._active:hover {
 
 @media (max-width: 47.9375em) {
   .photos__slider {
-    max-height: inherit;
+    height: inherit;
   }
 
   .photos__slide {
@@ -7479,6 +7500,10 @@ html.pc .form-review__submit._active:hover {
 @media (max-width: 768px) and (min-width: 48em) {
   .photos__slide {
     max-height: inherit;
+  }
+
+  .photos__slider {
+    height: inherit;
   }
 }
 

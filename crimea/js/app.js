@@ -6643,9 +6643,9 @@
                 }
             }
         }
+        initSliders();
         window.addEventListener("load", (function(e) {
-            initSliders();
-            document.querySelector(".swiper-slide").style.display = "flex";
+            document.querySelector(".swiper-wrapper").style.opacity = "1";
         }));
         var can_use_dom = __webpack_require__(807);
         function isObject_isObject(value) {
