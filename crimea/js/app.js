@@ -7818,6 +7818,15 @@
                     selectInput.classList.add("_empty");
                 } else selectInput.classList.remove("_empty");
             }));
+            var titleElement = document.querySelector(".anim__object");
+            var textElement = document.querySelector(".text2");
+            if (titleElement) {
+                var titleElementSpan = document.querySelector(".anim__object span");
+                if (titleElementSpan.textContent.length > 32) {
+                    titleElement.classList.add("_big");
+                    textElement.classList.add("_big");
+                }
+            }
         }));
         window.addEventListener("resize", (function() {
             const screenWidth = window.innerWidth;
