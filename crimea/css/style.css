@@ -2674,8 +2674,8 @@ html.pc .photos__arrow:hover {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
-  -webkit-transition: 1s ease 0s;
-  transition: 1s ease 0s;
+  -webkit-transition: 2s ease 0s;
+  transition: 2s ease 0s;
 }
 
 .photos__slide.active img {
