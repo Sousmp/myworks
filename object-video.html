@@ -71,8 +71,7 @@
 		<section class="anim anim__second">
 			<div class="anim__container">
 				<div class="anim__body anim__second-body ">
-					<h1 class="anim__object  _title"><span>Двухуровневый апартамент в трех шагах от моря
-						</span></h1>
+					<h1 class="anim__object  _title"><span>Четырёхкомнатная квартира в Ялте</span></h1>
 				</div>
 			</div>
 		</section>
@@ -84,39 +83,20 @@
 					</p>
 				</div>
 			</section>
-			<section class="photos">
-				<div class="photos__container">
-
-					<div class="photos__slider swiper">
-						<div class="photos__navigate">
-							<div class="photos__arrow photos__arrow-left"><span class="_icon-left-arrow"></span></div>
-							<div class="photos__arrow photos__arrow-right"><span class="_icon-right-arrow"></span></div>
-							<div class="photos__number">0/0 Offers</div>
-						</div>
-						<div class="photos__wrapper swiper-wrapper">
-							<div class="photos__slide swiper-slide">
-								<picture><source srcset="img/object/1.webp" type="image/webp"><img src="img/object/1.jpg" alt="Image"></picture>
-							</div>
-							<div class="photos__slide swiper-slide">
-								<picture><source srcset="img/object/2.webp" type="image/webp"><img src="img/object/2.jpg" alt="Image"></picture>
-							</div>
-							<div class="photos__slide swiper-slide">
-								<picture><source srcset="img/object/3.webp" type="image/webp"><img src="img/object/3.jpg" alt="Image"></picture>
-							</div>
-							<div class="photos__slide swiper-slide">
-								<picture><source srcset="img/object/2.webp" type="image/webp"><img src="img/object/2.jpg" alt="Image"></picture>
-							</div>
-							<div class="photos__slide swiper-slide">
-								<picture><source srcset="img/object/3.webp" type="image/webp"><img src="img/object/3.jpg" alt="Image"></picture>
-							</div>
-						</div>
-					</div>
-					<div class="photos__overlay"></div>
-					<div class="close-fullscreen"></div>
-					<div class="photos__pagination"></div>
+			<section class="video">
+				<link href="https://vjs.zencdn.net/8.10.0/video-js.css?_v=20240417232658" rel="stylesheet" />
+				<div class="video__container">
+					<video id="my-video2" class="video-js vjs-show-big-play-button-on-pause vjs-show-big-pause-button-on-play" controls preload="auto" width="640" height="264" poster="img/partner/1.jpg" data-setup='{"textTrackSettings": false}'>
+						<source src="img/crimea.mp4" type="video/mp4" />
+						<p class="vjs-no-js">
+							To view this video please enable JavaScript, and consider upgrading to a
+							web browser that
+							<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+						</p>
+					</video>
 				</div>
 			</section>
-			<section class="info">
+			<section class="info info__video">
 				<div class="info__container">
 					<div class="info__items">
 						<div class="info__item">
@@ -165,6 +145,40 @@
 							</div>
 						</div>
 					</div>
+
+				</div>
+			</section>
+			<section class="photos photos__video">
+				<div class="photos__container">
+					<div class="photos__slider swiper">
+						<div class="photos__navigate">
+							<div class="photos__arrow photos__arrow-left"><span class="_icon-left-arrow"></span></div>
+							<div class="photos__arrow photos__arrow-right"><span class="_icon-right-arrow"></span></div>
+							<div class="photos__number">0/0 Offers</div>
+						</div>
+						<div class="photos__wrapper swiper-wrapper">
+							<div class="photos__slide swiper-slide">
+								<picture><source srcset="img/object/1.webp" type="image/webp"><img width="360" height="240" src="img/object/1.jpg" alt="Image"></picture>
+							</div>
+							<div class="photos__slide swiper-slide">
+								<picture><source srcset="img/object/2.webp" type="image/webp"><img width="360" height="240" src="img/object/2.jpg" alt="Image"></picture>
+							</div>
+							<div class="photos__slide swiper-slide">
+								<picture><source srcset="img/object/3.webp" type="image/webp"><img width="360" height="240" src="img/object/3.jpg" alt="Image"></picture>
+							</div>
+							<div class="photos__slide swiper-slide">
+								<picture><source srcset="img/object/2.webp" type="image/webp"><img width="360" height="240" src="img/object/2.jpg" alt="Image"></picture>
+							</div>
+							<div class="photos__slide swiper-slide">
+								<picture><source srcset="img/object/3.webp" type="image/webp"><img width="360" height="240" src="img/object/3.jpg" alt="Image"></picture>
+							</div>
+						</div>
+					</div>
+					<div class="photos__pagination"></div>
+				</div>
+			</section>
+			<section class="info info__video-text">
+				<div class="info__container">
 					<p class="info__text">
 						Просторная и уютная квартира в ЖК «Омега». <br> ЖК «Омега», состоящий из 3-x домов, находится на закрытой и охраняемой территории с круглосуточным видеонаблюдением.
 						<br> <br> В каждой квартире удобная планировка, просторные террасы и балконы, толстые стены, качественная отделка. Статус - квартира! Стоимость содержания составляет 40 руб/м².
@@ -413,7 +427,14 @@
 			</div>
 		</div>
 	</div>
+	<script src="https://vjs.zencdn.net/8.10.0/video.min.js?_v=20240417232658"></script>
 	<script src="https://unpkg.com/imask?_v=20240417232658"></script>
+
+	<script>
+
+
+	</script>
+
 	<script src="js/app.min.js?_v=20240417232658"></script>
 </body>
 
