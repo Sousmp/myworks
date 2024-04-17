@@ -7757,7 +7757,7 @@
         }
         const script_slides = document.querySelectorAll(".photos__slide");
         const slider = document.querySelector(".photos__slider");
-        if (script_slides && slider) {
+        if (script_slides && slider && !slider.classList.contains("one-anim")) {
             const observerSlide = new IntersectionObserver((entries => {
                 entries.forEach((entry => {
                     if (entry.isIntersecting && !slider.classList.contains("fullscreen")) entry.target.classList.add("active"); else entry.target.classList.remove("active");
@@ -7768,6 +7768,17 @@
             script_slides.forEach((slide => {
                 observerSlide.observe(slide);
             }));
+        }
+        const script_slide = document.querySelector(".photos__slide-anim");
+        if (script_slide && slider && slider.classList.contains("one-anim")) {
+            const observerSlide = new IntersectionObserver((entries => {
+                entries.forEach((entry => {
+                    if (entry.isIntersecting && !slider.classList.contains("fullscreen")) script_slide.classList.add("active"); else script_slide.classList.remove("active");
+                }));
+            }), {
+                threshold: .5
+            });
+            observerSlide.observe(script_slide);
         }
         window.onload = function() {
             var photosSlide = document.querySelector(".photos__slide");
