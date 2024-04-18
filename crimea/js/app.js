@@ -6584,7 +6584,7 @@
                         }
                     }
                 };
-                new Swiper(".reviews__slider", params);
+                var mySwiper = new Swiper(".reviews__slider", params);
             }
             if (document.querySelector(".photos__slider")) {
                 new Swiper(".photos__slider", {
@@ -6631,9 +6631,20 @@
                     }
                 });
             }
+            function updateSlideClasses() {
+                if (mySwiper) {
+                    var slides = document.querySelectorAll(".reviews__slide");
+                    var activeIndex = mySwiper.activeIndex;
+                    slides.forEach((function(slide, index) {
+                        slide.classList.remove("swiper-slide-prev-prev", "swiper-slide-prev", "swiper-slide-next", "swiper-slide-next-next", "swiper-slide-active");
+                        if (index === activeIndex - 2) slide.classList.add("swiper-slide-prev-prev"); else if (index === activeIndex - 1) slide.classList.add("swiper-slide-prev"); else if (index === activeIndex) slide.classList.add("swiper-slide-active"); else if (index === activeIndex + 1) slide.classList.add("swiper-slide-next"); else if (index === activeIndex + 2) slide.classList.add("swiper-slide-next-next");
+                    }));
+                }
+            }
         }
         const slides = document.querySelectorAll(".photos__slide");
         const photoSlider = document.querySelector(".photos__slider");
+        const overlay = document.querySelector(".photos__overlay");
         slides.forEach((slide => {
             slide.addEventListener("click", (() => {
                 if (bodyLockStatus) {
@@ -6650,14 +6661,17 @@
                 }
             }));
         }));
-        function updateSlideClasses() {
-            if (mySwiper) {
-                var slides = document.querySelectorAll(".reviews__slide");
-                var activeIndex = mySwiper.activeIndex;
-                slides.forEach((function(slide, index) {
-                    slide.classList.remove("swiper-slide-prev-prev", "swiper-slide-prev", "swiper-slide-next", "swiper-slide-next-next", "swiper-slide-active");
-                    if (index === activeIndex - 2) slide.classList.add("swiper-slide-prev-prev"); else if (index === activeIndex - 1) slide.classList.add("swiper-slide-prev"); else if (index === activeIndex) slide.classList.add("swiper-slide-active"); else if (index === activeIndex + 1) slide.classList.add("swiper-slide-next"); else if (index === activeIndex + 2) slide.classList.add("swiper-slide-next-next");
-                }));
+        if (overlay) overlay.addEventListener("click", (() => {
+            closeSlider();
+        }));
+        document.addEventListener("keydown", (event => {
+            if (event.key === "Escape") closeSlider();
+        }));
+        function closeSlider() {
+            if (bodyLockStatus) {
+                bodyLockToggle();
+                photoSlider.classList.remove("fullscreen");
+                slides.forEach((slide => slide.classList.remove("fullscreen-slide")));
             }
         }
         initSliders();
@@ -7757,28 +7771,15 @@
         }
         const script_slides = document.querySelectorAll(".photos__slide");
         const slider = document.querySelector(".photos__slider");
-        if (script_slides && slider && !slider.classList.contains("one-anim")) {
-            const observerSlide = new IntersectionObserver((entries => {
+        if (script_slides.length > 0 && slider) {
+            const observerFirstSlide = new IntersectionObserver((entries => {
                 entries.forEach((entry => {
                     if (entry.isIntersecting && !slider.classList.contains("fullscreen")) entry.target.classList.add("active"); else entry.target.classList.remove("active");
                 }));
             }), {
                 threshold: .5
             });
-            script_slides.forEach((slide => {
-                observerSlide.observe(slide);
-            }));
-        }
-        const script_slide = document.querySelector(".photos__slide-anim");
-        if (script_slide && slider && slider.classList.contains("one-anim")) {
-            const observerSlide = new IntersectionObserver((entries => {
-                entries.forEach((entry => {
-                    if (entry.isIntersecting && !slider.classList.contains("fullscreen")) script_slide.classList.add("active"); else script_slide.classList.remove("active");
-                }));
-            }), {
-                threshold: .5
-            });
-            observerSlide.observe(script_slide);
+            observerFirstSlide.observe(script_slides[0]);
         }
         window.onload = function() {
             var photosSlide = document.querySelector(".photos__slide");
@@ -7828,6 +7829,12 @@
                 };
                 observer.observe(selectFilterCurrency, config);
             }
+            window.addEventListener("resize", fixHeight);
+            function fixHeight() {
+                let vh = window.innerHeight * .01;
+                document.documentElement.style.setProperty("--vh", `${vh}px`);
+            }
+            fixHeight();
             let h1 = document.querySelector(".service__title");
             let text = document.querySelector(".cards__text");
             if (h1) {

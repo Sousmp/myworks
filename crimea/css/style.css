@@ -2532,7 +2532,6 @@ html.pc .reviews__btn:hover {
 
 .photos__slider.fullscreen .photos__slide {
   max-width: 100vw;
-  height: auto;
   width: auto;
   max-height: calc(var(--vh, 1vh) * 100);
 }
@@ -2689,8 +2688,10 @@ html.pc .photos__arrow:hover {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
-  -webkit-transition: 2s ease 0s;
-  transition: 2s ease 0s;
+  -webkit-transition: -webkit-transform 2s ease 0s;
+  transition: -webkit-transform 2s ease 0s;
+  transition: transform 2s ease 0s;
+  transition: transform 2s ease 0s, -webkit-transform 2s ease 0s;
 }
 
 .photos__slide.active img {
