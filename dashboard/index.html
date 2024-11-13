@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20241113162725">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:wght@400;500;600&display=swap&_v=20241113162725" rel="stylesheet">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<aside class="sidebar" data-fullscreen>
+			<div class="sidebar__logo logo">
+				<span class="logo__icon _icon-logo"></span>
+				<h3 class="logo__text">Dashboard<span class="logo__version">v.01</span>
+				</h3>
+			</div>
+			<nav class="sidebar__nav">
+				<ul class="sidebar__list">
+					<li><a href="#" class="sidebar__link">
+							<span class="sidebar__icon _icon-dashboard"></span>
+							<p class="sidebar__text">Dashboard</p>
+						</a></li>
+					<li><a href="#" class="sidebar__link">
+							<span class="sidebar__icon _icon-product"></span>
+							<p class="sidebar__text">Product</p>
+							<span class="sidebar__arrow _icon-arrow"></span>
+						</a></li>
+					<li><a href="#" class="sidebar__link sidebar__link--active">
+							<span class="sidebar__icon _icon-customers"></span>
+							<p class="sidebar__text">Customers</p>
+							<span class="sidebar__arrow _icon-arrow"></span>
+						</a></li>
+					<li><a href="#" class="sidebar__link">
+							<span class="sidebar__icon _icon-income"></span>
+							<p class="sidebar__text">Income</p>
+							<span class="sidebar__arrow _icon-arrow"></span>
+						</a></li>
+					<li><a href="#" class="sidebar__link">
+							<span class="sidebar__icon _icon-promote"></span>
+							<p class="sidebar__text">Promote</p>
+							<span class="sidebar__arrow _icon-arrow"></span>
+						</a></li>
+					<li><a href="#" class="sidebar__link">
+							<span class="sidebar__icon _icon-help"></span>
+							<p class="sidebar__text">Help</p>
+							<span class="sidebar__arrow _icon-arrow"></span>
+						</a></li>
+				</ul>
+			</nav>
+			<div class="sidebar__user user">
+				<picture><source srcset="img/user.webp" type="image/webp"><img class="user__img" src="img/user.jpg" alt="User photo"></picture>
+				<div class="user__info">
+					<h6 class="user__name">Evano</h6>
+					<p class="user__position">Project Manager</p>
+				</div>
+			</div>
+		</aside>
+		<main class="main">
+			<section class="title">
+				<div class="title__container">
+					<button class="title__burger">
+						<span></span>
+					</button>
+					<h1 class="title__title">Hello Evano <span style="position: absolute;" class="animated-hand">👋🏼</span>&nbsp&nbsp&nbsp&nbsp ,</h1>
+				</div>
+			</section>
+			<section class="customer">
+				<div class="customer__container">
+					<div class="customer__body">
+						<div class="customer__customer-head customer-head">
+							<div class="customer-head__left">
+								<h3 class="customer-head__title">All Customers</h3>
+								<p class="customer-head__subtitle">Active Members</p>
+							</div>
+							<form action="#" class="customer-head__right">
+								<label for="search">
+									<input id="search" class="customer-head__input" type="text" placeholder="Search">
+									<span class="customer-head__icon _icon-search"></span>
+								</label>
+							</form>
+						</div>
+						<div class="customer__customer-table customer-table">
+							<div class="customer-table__scroll">
+								<table class="customer-table__table">
+									<thead class="customer-table__thead">
+										<tr>
+											<td>Customer Name</td>
+											<td>Company</td>
+											<td>Phone Number</td>
+											<td>Email</td>
+											<td>Country</td>
+											<td>Status</td>
+										</tr>
+									</thead>
+									<tbody class="customer-table__tbody">
+										<tr>
+											<td>Jane Cooper</td>
+											<td>Microsoft</td>
+											<td>(225) 555-0118</td>
+											<td>jane@microsoft.com</td>
+											<td>United States</td>
+											<td><span class="customer-table__status customer-table__status--active">Active</span></td>
+
+										</tr>
+										<tr>
+											<td>Floyd Miles</td>
+											<td>Yahoo</td>
+											<td>(205) 555-0100</td>
+											<td>floyd@yahoo.com</td>
+											<td>Kiribati</td>
+											<td><span class="customer-table__status customer-table__status--inactive">Inactive</span></td>
+										</tr>
+										<tr>
+											<td>Ronald Richards</td>
+											<td>Adobe</td>
+											<td>(302) 555-0107</td>
+											<td>ronald@adobe.com</td>
+											<td>Israels</td>
+											<td><span class="customer-table__status customer-table__status--inactive">Inactive</span></td>
+										</tr>
+										<tr>
+											<td>Marvin McKinney</td>
+											<td>Tesla</td>
+											<td>(252) 555-0126</td>
+											<td>marvin@tesla.com</td>
+											<td>Iran</td>
+											<td><span class="customer-table__status customer-table__status--active">Active</span></td>
+										</tr>
+										<tr>
+											<td>Jane Cooper</td>
+											<td>Microsoft</td>
+											<td>(225) 555-0118</td>
+											<td>jane@microsoft.com</td>
+											<td>United States</td>
+											<td><span class="customer-table__status customer-table__status--active">Active</span></td>
+
+										</tr>
+										<tr>
+											<td>Floyd Miles</td>
+											<td>Yahoo</td>
+											<td>(205) 555-0100</td>
+											<td>floyd@yahoo.com</td>
+											<td>Kiribati</td>
+											<td><span class="customer-table__status customer-table__status--inactive">Inactive</span></td>
+										</tr>
+										<tr>
+											<td>Ronald Richards</td>
+											<td>Adobe</td>
+											<td>(302) 555-0107</td>
+											<td>ronald@adobe.com</td>
+											<td>Israels</td>
+											<td><span class="customer-table__status customer-table__status--inactive">Inactive</span></td>
+										</tr>
+										<tr>
+											<td>Marvin McKinney</td>
+											<td>Tesla</td>
+											<td>(252) 555-0126</td>
+											<td>marvin@tesla.com</td>
+											<td>Iran</td>
+											<td><span class="customer-table__status customer-table__status--active">Active</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="customer__customer-footer customer-footer">
+							<p class="customer-footer__text">Showing data 1 to 8 of 256K entries</p>
+							<div class="customer-footer__pagination">
+								<button class="customer-footer__button pagination-button">&lt;</button>
+								<button class="customer-footer__button pagination-button pagination-button--active">1</button>
+								<button class="customer-footer__button pagination-button">2</button>
+								<button class="customer-footer__button pagination-button">3</button>
+								<button class="customer-footer__button pagination-button">4</button>
+								<span class="customer-footer__ellipsis">...</span>
+								<button class="customer-footer__button pagination-button">40</button>
+								<button class="customer-footer__button pagination-button">&gt;</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+	<!-- 
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+			</div>
+		</div>
+	</div>
+</div>
+ -->
+
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js?_v=20241113162725"></script>
+	<script src="js/app.min.js?_v=20241113162725"></script>
+</body>
+
+</html>
